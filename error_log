@@ -1,0 +1,4 @@
+[17-Nov-2015 15:00:11 America/New_York] PHP Fatal error:  Call to undefined function mysqli_init() in /home/jhon/public_html/system/database/drivers/mysqli/mysqli_driver.php on line 125
+[11-May-2016 14:44:25 America/New_York] PHP Fatal error:  Call to a member function get_vacunacion() on a non-object in /home/jhon/public_html/application/controllers/amo/Mascotas.php on line 92
+[13-May-2016 20:07:46 America/New_York] PHP Fatal error:  Call to a member function get_vacunacion() on a non-object in /home/jhon/public_html/application/controllers/amo/Mascotas.php on line 92
+[13-May-2016 22:49:22 America/New_York] PHP Fatal error:  Call to a member function get_vacunacion() on a non-object in /home/jhon/public_html/application/controllers/amo/Mascotas.php on line 92
