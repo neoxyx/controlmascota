@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Veterinario<small>  Crear Clinica</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>"><i class="fa fa-home"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>"><i class="fa fa-home"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Datos Clinica</li>
 
                 <div style="clear: both;"></div>
@@ -25,7 +25,7 @@ Downloaded from http://devzone.co.in
 
 
 
-    <form  action="<?= base_url() . 'index.php/veterinario/Perfil/guardar_empresa' ?>" enctype="multipart/form-data" method="post" id="basicBootstrapForm" class="form-horizontal" >
+    <form  action="<?php echo base_url() . 'index.php/veterinario/Perfil/guardar_empresa' ?>" enctype="multipart/form-data" method="post" id="basicBootstrapForm" class="form-horizontal" >
         <input type="hidden" name="id" value="<?php
         foreach ($user as $key) {
             echo $key->id;
@@ -72,7 +72,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($paises as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                         <?php
                     }
                     ?>	

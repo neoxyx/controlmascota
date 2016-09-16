@@ -12,7 +12,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Conductores <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/get_conductores_contratados' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/get_conductores_contratados' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Conductores buscando empleo</li>               
                 <div style="clear: both;"></div>
             </ol>

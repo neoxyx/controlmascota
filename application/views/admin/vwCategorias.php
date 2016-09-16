@@ -12,11 +12,11 @@ Downloaded from http://devzone.co.in
           <div class="col-lg-12">
             <h1>Categorias <small>Listado</small></h1>
             <ol class="breadcrumb">
-              <li><a href="<?= base_url().'index.php/admin/Dashboard/licencias'?>"><i class="fa fa-level-up"></i></a></li>
+              <li><a href="<?php echo base_url().'index.php/admin/Dashboard/licencias'?>"><i class="fa fa-level-up"></i></a></li>
               <li class="active"><i class="icon-file-alt"></i> Categorias</li>
               
               
-              <a href="<?= base_url().'index.php/admin/Categorias/add_categoria'?>"><button class="btn btn-primary" type="button" style="float:right;">Añadir Categoria</button></a>
+              <a href="<?php echo base_url().'index.php/admin/Categorias/add_categoria'?>"><button class="btn btn-primary" type="button" style="float:right;">Añadir Categoria</button></a>
               <div style="clear: both;"></div>
             </ol>
           </div>

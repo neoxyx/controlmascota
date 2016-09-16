@@ -20,9 +20,9 @@ Downloaded from http://devzone.co.in
                 }
                 ?>  <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Datos Empresa</li>
-               <a href="<?= base_url() . 'index.php/veterinario/Perfil/add_emp' ?>"><
+               <a href="<?php echo base_url() . 'index.php/veterinario/Perfil/add_emp' ?>"><
                   <?php
                    if(!$empresa){
                       //ocultar el boton si laclinica ya està creada

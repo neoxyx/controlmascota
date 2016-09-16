@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Clinica<small>  Crear Amo</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-dashboard fa-2x"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-dashboard fa-2x"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Datos Personales</li>
                 <div style="clear: both;"></div>
             </ol>
@@ -71,7 +71,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($paises as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                         <?php
                     }
                     ?>	

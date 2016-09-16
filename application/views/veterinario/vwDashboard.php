@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 <!-- Page Specific CSS -->
 <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-<script src="<?= base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
 
 <div id="page-wrapper">
 
@@ -103,7 +103,7 @@ Downloaded from http://devzone.co.in
                     </div>
                 </div>
                 <?php if ($permiso == 'Administrador') { ?>
-                    <a href="<?= base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>">
+                    <a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>">
                         <div class="panel-footer announcement-bottom">
                             <div class="row">
                                 <div class="col-xs-8">
@@ -146,7 +146,7 @@ Downloaded from http://devzone.co.in
                     </div>
                 </div>
                 <?php if ($permiso == 'Administrador') { ?>
-                    <a href="<?= base_url() . 'index.php/veterinario/Perfil/get_empleados' ?>">
+                    <a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empleados' ?>">
                         <div class="panel-footer announcement-bottom">
                             <div class="row">
                                 <div class="col-xs-8">
@@ -189,7 +189,7 @@ Downloaded from http://devzone.co.in
                     </div>
                 </div>
                 <?php if ($permiso == 'Administrador') { ?>
-                    <a href="<?= base_url() . 'index.php/veterinario/Clientes/get_clientes/'.$xidusuario ?>">
+                    <a href="<?php echo base_url() . 'index.php/veterinario/Clientes/get_clientes/'.$xidusuario ?>">
                         <div class="panel-footer announcement-bottom">
                             <div class="row">
                                 <div class="col-xs-8">
@@ -232,7 +232,7 @@ Downloaded from http://devzone.co.in
                     </div>
                 </div>
                 <?php if ($permiso == 'Administrador') { ?>
-                    <a href="<?= base_url() . 'index.php/veterinario/Pacientes/get_pacientes/'.$xidempresa ?>">
+                    <a href="<?php echo base_url() . 'index.php/veterinario/Pacientes/get_pacientes/'.$xidempresa ?>">
                         <div class="panel-footer announcement-bottom">
                             <div class="row">
                                 <div class="col-xs-8">

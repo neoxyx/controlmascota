@@ -9,18 +9,18 @@
         <title>Control Mascotas</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
+        <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href="<?= base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css' ?>" media="screen"></LINK>
-        <SCRIPT type="text/javascript" src="<?= base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js' ?>"></script>
+        <link href="<?php echo base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css' ?>" media="screen"></LINK>
+        <SCRIPT type="text/javascript" src="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js' ?>"></script>
         <!-- Add custom CSS here -->
-        <link href="<?= base_url() . 'assets/css/arkadmin.css' ?>" rel="stylesheet">
+        <link href="<?php echo base_url() . 'assets/css/arkadmin.css' ?>" rel="stylesheet">
         <!-- JavaScript -->
-        <script src="<?= base_url() . 'assets/js/jquery-1.10.2.js' ?>"></script>
-        <script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
-        <script src="<?= base_url() . 'assets/js/das.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/jquery-1.10.2.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/bootstrap.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/das.js' ?>"></script>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script language="javascript" type="text/javascript">
@@ -37,7 +37,7 @@
                 $("#pais").change(function () {
                     $("#pais option:selected").each(function () {
                         pais = $('#pais').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_provincias' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_provincias' ?>", {
                             pais: pais
                         }, function (data) {
                             $("#provincia").html(data);
@@ -51,7 +51,7 @@
                 $("#provincia").change(function () {
                     $("#provincia option:selected").each(function () {
                         provincia = $('#provincia').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_localidades' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_localidades' ?>", {
                             provincia: provincia
                         }, function (data) {
                             $("#localidad").html(data);
@@ -66,7 +66,7 @@
                 $("#pais1").change(function () {
                     $("#pais1 option:selected").each(function () {
                         pais = $('#pais1').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_provincias' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_provincias' ?>", {
                             pais: pais
                         }, function (data) {
                             $("#provincia1").html(data);
@@ -80,7 +80,7 @@
                 $("#provincia1").change(function () {
                     $("#provincia1 option:selected").each(function () {
                         provincia = $('#provincia1').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_localidades' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_localidades' ?>", {
                             provincia: provincia
                         }, function (data) {
                             $("#localidad1").html(data);
@@ -94,7 +94,7 @@
                 $("#especies").change(function () {
                     $("#especies option:selected").each(function () {
                         especies = $('#especies').val();
-                        $.post("<?= base_url() . 'index.php/amo/Mascotas/llena_razas' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/amo/Mascotas/llena_razas' ?>", {
                             especies: especies
                         }, function (data) {
                             $("#raza").html(data);
@@ -171,7 +171,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= base_url() . 'index.php/veterinario/Dashboard' ?>">Control Mascotas</a>
+                    <a class="navbar-brand" href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>">Control Mascotas</a>
                 </div>
                 <?php
 // Define a default Page
@@ -180,11 +180,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li><a href="<?= base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-dashboard"></i> Tablero</a></li>
-                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><?php if ($permiso === 'Administrador') { ?><a href="<?= base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Empleados</a><?php } else { ?><a href="#"><i class="fa fa-dashboard"></i> Empleados</a><?php } ?></li> 
-                        <li <?php echo $pg == 'clientes' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/veterinario/Clientes/get_clientes/'.$cont ?>"><i class="fa fa-paw"></i> Clientes</a></li>
-                        <li <?php echo $pg == 'pacientes' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/veterinario/Pacientes/get_pacientes/'.$cont ?>"><i class="fa fa-paw"></i> Pacientes</a></li>
-                        <li <?php echo $pg == 'gps' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/veterinario/Gps' ?>"><i class="fa fa-map-marker"></i> GPS</a></li>
+                        <li><a href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-dashboard"></i> Tablero</a></li>
+                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Empleados</a><?php } else { ?><a href="#"><i class="fa fa-dashboard"></i> Empleados</a><?php } ?></li> 
+                        <li <?php echo $pg == 'clientes' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/veterinario/Clientes/get_clientes/'.$cont ?>"><i class="fa fa-paw"></i> Clientes</a></li>
+                        <li <?php echo $pg == 'pacientes' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/veterinario/Pacientes/get_pacientes/'.$cont ?>"><i class="fa fa-paw"></i> Pacientes</a></li>
+                        <li <?php echo $pg == 'gps' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/veterinario/Gps' ?>"><i class="fa fa-map-marker"></i> GPS</a></li>
 
 
                     </ul>
@@ -210,11 +210,11 @@
                         <li class="dropdown user-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?= base_url() . 'index.php/veterinario/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
-                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?= base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>"><i class="fa fa-hospital-o"></i> Mi Clinica </a><?php } else { ?><a href="#"><i class="fa fa-building"></i> Mi empresa </a><?php } ?></li>
-                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?= base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Mis empleados </a><?php } else { ?><a href="#"><i class="fa fa-users"></i> Mis empleados </a><?php } ?></li>
+                                <li><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
+                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>"><i class="fa fa-hospital-o"></i> Mi Clinica </a><?php } else { ?><a href="#"><i class="fa fa-building"></i> Mi empresa </a><?php } ?></li>
+                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Mis empleados </a><?php } else { ?><a href="#"><i class="fa fa-users"></i> Mis empleados </a><?php } ?></li>
                                 <li class="divider"></li>
-                                <li><a href="<?= base_url() . 'index.php/Login/logout' ?>"><i class="fa fa-power-off"></i> Salir</a></li>
+                                <li><a href="<?php echo base_url() . 'index.php/Login/logout' ?>"><i class="fa fa-power-off"></i> Salir</a></li>
                             </ul>
                         </li>
                     </ul>

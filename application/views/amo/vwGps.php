@@ -44,7 +44,7 @@ Downloaded from http://devzone.co.in
             }
         </style>
 
-<script src="<?= base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
 <script type="text/javascript">
             function datos_marker(lat, lng, marker)
             {
@@ -53,7 +53,7 @@ Downloaded from http://devzone.co.in
                 google.maps.event.trigger(marker, 'click');
             }
         </script>
-        <?= $map['js'] ?>
+        <?php echo $map['js'] ?>
 
 <div id="page-wrapper">
 
@@ -76,13 +76,13 @@ Downloaded from http://devzone.co.in
                         <h3 class="panel-title"><i class="fa fa-map"></i> </h3>
                     </div>
                     <div class="panel-body">
-                        <div id="morris-chart-area"><?= $map['html'] ?>
+                        <div id="morris-chart-area"><?php echo $map['html'] ?>
                             <div id="sidebar">
                                 <ul>
                                     <?php
                                     foreach ($datos as $marker_sidebar) {
-                                        ?><li id="li_side" onclick="datos_marker(<?= $marker_sidebar->pos_y ?>,<?= $marker_sidebar->pos_x ?>, marker_<?= $marker_sidebar->id ?>)">
-                                            <?= $marker_sidebar->id; ?>&nbsp;&nbsp;<?= substr($marker_sidebar->infowindow, 0, 14) ?></li><?php
+                                        ?><li id="li_side" onclick="datos_marker(<?php echo $marker_sidebar->pos_y ?>,<?php echo $marker_sidebar->pos_x ?>, marker_<?php echo $marker_sidebar->id ?>)">
+                                            <?php echo $marker_sidebar->id; ?>&nbsp;&nbsp;<?php echo substr($marker_sidebar->infowindow, 0, 14) ?></li><?php
                                     }
                                     ?>
                                 </ul>

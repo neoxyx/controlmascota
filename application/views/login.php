@@ -6,6 +6,17 @@
         <title>Control Mascotas V 1.0.0</title>
         <!--link the bootstrap css file-->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- alertify -->
+         <link href="<?php echo site_url() ?>asset/css/alertify.min.css" rel="stylesheet" type="text/css">
+        <!--load jQuery library-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--load bootstrap.js-->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <!-- alertify -->
+        <script src="<?php echo site_url() ?>asset/js/alertify.min.js"></script>
+        <!-- calendar -->
+        <script src="<?php echo site_url()?>asset/js/calendar/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo site_url()?>asset/css/calendar/jquery-ui.css">
 
         <style type="text/css">
             body{
@@ -70,7 +81,7 @@
                                     <!--<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>-->
 
 
-                                    <li class="previous"><a href="<?= base_url() . 'index.php/Portal' ?>"><span aria-hidden="true">&larr;</span> Volver</a></li>                                        
+                                    <li class="previous"><a href="<?php echo base_url() . 'index.php/Portal' ?>"><span aria-hidden="true">&larr;</span> Volver</a></li>                                        
                                 </div>
 
                             </div>
@@ -81,7 +92,7 @@
                             <div class="col-md-12 control">
                                 <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
                                     <h4>No tengo cuenta!</h4> 
-                                    <a href="<?= base_url() . 'index.php/Registros' ?>">
+                                    <a href="<?php echo base_url() . 'index.php/Registros' ?>">
                                         <h3>Registrarme</h3>
                                     </a>
                                 </div>
@@ -93,11 +104,6 @@
             <?php echo form_close(); ?>
 
         </div>
-
-        <!--load jQuery library-->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <!--load bootstrap.js-->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </body>
 </html>
 

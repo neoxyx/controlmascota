@@ -15,7 +15,7 @@ Downloaded from http://devzone.co.in
                 <li class="active"><i class="fa fa-opencart"></i> Ofertas</li>
                 <li class="active"> <?php echo $mensaje?></li>
 
-                <a href="<?=base_url().'index.php/conductor/Ofertas'?>"><button class="btn btn-primary" type="button" style="float:right;">Volver Atras</button></a>
+                <a href="<?php echo base_url().'index.php/conductor/Ofertas'?>"><button class="btn btn-primary" type="button" style="float:right;">Volver Atras</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>

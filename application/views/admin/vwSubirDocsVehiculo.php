@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Subir / Ver  <small>Documentación Vehiculos</small></h1>               
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/Registros/registros_pen_docs_total' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/Registros/registros_pen_docs_total' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> <select id="combito">
                         <option>Seleccione tipo de archivos</option>
                         <option value="1">Foto x Foto</option>
@@ -40,8 +40,8 @@ Downloaded from http://devzone.co.in
             </div>
         </div><!-- /.row -->
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_soat' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="soat" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_soat' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="soat" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->soat;
                 }
@@ -66,8 +66,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_rtecno' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="rtecno" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_rtecno' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="rtecno" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->rtecnomecanica;
                 }
@@ -93,8 +93,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_ltransito' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="ltran" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_ltransito' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="ltran" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->licenciatransito;
                 }
@@ -119,8 +119,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_ccprop' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="ccprop" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_ccprop' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="ccprop" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->cedulapropietario;
                 }
@@ -145,8 +145,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_rutprop' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="rutprop" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_rutprop' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="rutprop" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->rutpropietario;
                 }
@@ -171,8 +171,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_carnet' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="carnet" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_carnet' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="carnet" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->carnetafiliacion;
                 }
@@ -201,8 +201,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
         <input type="hidden" name="pdf" value=""/>
-        <form action="<?= base_url() . 'index.php/Registros/subir_pdf_vehiculo' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><h4>Documento actual: <a href="<?= base_url() . 'uploads/' . $row->pdf ?>"><?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_pdf_vehiculo' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><h4>Documento actual: <a href="<?php echo base_url() . 'uploads/' . $row->pdf ?>"><?php
                         echo $row->pdf;
                         ?></a></h4></div>
             <div align="center">                

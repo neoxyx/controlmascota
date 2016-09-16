@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Editar<small>Categoria</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/admin/Categorias' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/admin/Categorias' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active">Categoria</li>
 
                 <div style="clear: both;"></div>
@@ -23,7 +23,7 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-    <form method="post" enctype="multipart/form-data" action="<?= base_url() . 'index.php/admin/Categorias/edit_categoria' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" enctype="multipart/form-data" action="<?php echo base_url() . 'index.php/admin/Categorias/edit_categoria' ?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
             <label class="col-xs-3 control-label">Descripción</label>
             <div class="col-xs-4">

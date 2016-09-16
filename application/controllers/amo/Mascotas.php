@@ -27,7 +27,7 @@ class Mascotas extends CI_Controller {
             $razas = $this->Mascotas_model->get_razas($especies);
             foreach ($razas as $fila) {
                 ?>
-                <option value="<?= $fila->id ?>"><?= $fila->nombre_raza ?></option>
+                <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_raza ?></option>
                 <?php
             }
         }

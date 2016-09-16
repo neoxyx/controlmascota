@@ -8,23 +8,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
     <head>
         <title>Control Mascota, todo para nuestras mascotas y veterinarios</title>
-        <link href="<?= base_url() . 'assets/css_portada/style.css' ?>" rel="stylesheet" type="text/css" media="all" />
+        <link href="<?php echo base_url() . 'assets/css_portada/style.css' ?>" rel="stylesheet" type="text/css" media="all" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link href='//fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
         <!--slider-->
-        <link href="<?= base_url() . 'assets/css_portada/slider.css' ?>" rel="stylesheet" type="text/css" media="all"/>
-        <script type="text/javascript" src="<?= base_url() . 'assets/js_portada/jquery-1.9.0.min.js' ?>"></script>
-        <script type="text/javascript" src="<?= base_url() . 'assets/js_portada/jquery.nivo.slider.js' ?>"></script> 
+        <link href="<?php echo base_url() . 'assets/css_portada/slider.css' ?>" rel="stylesheet" type="text/css" media="all"/>
+        <script type="text/javascript" src="<?php echo base_url() . 'assets/js_portada/jquery-1.9.0.min.js' ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url() . 'assets/js_portada/jquery.nivo.slider.js' ?>"></script> 
         <!--light-box-->
-        <script type="text/javascript" src="<?= base_url() . 'assets/js_portada/jquery.lightbox.js' ?>"></script>
-        <link rel="stylesheet" type="text/css" href="<?= base_url() . 'assets/css_portada/lightbox.css' ?>" media="screen">
+        <script type="text/javascript" src="<?php echo base_url() . 'assets/js_portada/jquery.lightbox.js' ?>"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css_portada/lightbox.css' ?>" media="screen">
         <script type="text/javascript">
             $(function () {
                 $('.gallery a').lightBox();
             });
         </script>    
-        <script type="text/javascript" src="<?= base_url() . 'assets/js_portada/resp-menu.js' ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url() . 'assets/js_portada/resp-menu.js' ?>"></script>
         <script type="text/javascript">$(document).ready(function () {
                 $(".resp-menu").flexymenu({speed: 400, indicator: true});
             });</script>
@@ -34,7 +34,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="wrap">                                                                                
                 <div class="header-top">	                                                                      
                     <div class="logo">                                                                        
-                        <a href="<?= base_url() . 'index.php/Portal' ?>"><img src="<?= base_url() . 'assets/images_portada/logo1.png' ?>" alt=""/></a>                                             
+                        <a href="<?php echo base_url() . 'index.php/Portal' ?>"><img src="<?php echo base_url() . 'assets/images_portada/logo1.png' ?>" alt=""/></a>                                             
                     </div>                                                                                    
                     <div class="phone">                                                                       
                         <span class="order">Ordene en linea:</span><br>                                          
@@ -48,16 +48,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="banner-navigation">
                         <div class="banner-nav">
                             <ul class="resp-menu orange nav1">
-                                <li class="cap"><a href="<?= base_url() . 'index.php/Portal' ?>">Inicio</a></li>
-                                <li><a href="<?= base_url() . 'index.php/Portal/nosotros' ?>">Sobre Nosotros</a></li>
+                                <li class="cap"><a href="<?php echo base_url() . 'index.php/Portal' ?>">Inicio</a></li>
+                                <li><a href="<?php echo base_url() . 'index.php/Portal/nosotros' ?>">Sobre Nosotros</a></li>
                                 <li class=""><a href="JavaScript:void(0)">Plataforma</a>
                                     <ul>
-                                        <li><a href="<?= base_url() . 'index.php/Login' ?>">Acceso</a></li>
+                                        <li><a href="<?php echo base_url() . 'index.php/Login' ?>">Acceso</a></li>
 
-                                        <li><a href="<?= base_url() . 'index.php/Portal/services' ?>">Conoce nuestro software</a></li>
+                                        <li><a href="<?php echo base_url() . 'index.php/Portal/services' ?>">Conoce nuestro software</a></li>
                                     </ul>
                                 </li>
-                                <li class="active"><a href="<?= base_url() . 'index.php/Portal/contact' ?>">Contactenos</a></li>
+                                <li class="active"><a href="<?php echo base_url() . 'index.php/Portal/contact' ?>">Contactenos</a></li>
                             </ul>
                             <div class="clear"> </div>
                         </div>
@@ -76,32 +76,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <?php echo validation_errors(); ?><?php echo $mensaje ?>
                         <?php                       
-                        echo form_open("Mail/send_mail");
+    echo form_open("Mail/send_mail");
                         ?>                     
-                            <div class="to">
-                                <input type="text" name="nombre" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                            this.value = 'Nombre';
-                                        }">
-                                <input type="text" name="email" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                            this.value = 'Email';
-                                        }" style="margin-left: 10px">
-                            </div>
-                            <div class="to">
-                                <input type="text" name="web" class="text" value="Tu pagina Web" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                            this.value = 'Tu pagina Web';
-                                        }">
-                                <input type="text" name="subject" class="text" value="Asunto" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                            this.value = 'Asunto';
-                                        }" style="margin-left: 10px">
-                            </div>
-                            <div class="text">
-                                <textarea name="message" value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                            this.value = 'Mensaje';
-                                        }">Mensaje:</textarea>
-                            </div>
-                            <div>
-                                <input type="submit" class="submit" value="Enviar">
-                            </div>
+                        <div class="to">
+                            <input type="text" name="nombre" class="text" value="Nombre" onfocus="this.value = '';" onblur="if (this.value == '') {
+                                                                                                                            this.value = 'Nombre';
+                                                                                                                            }">
+                            <input type="text" name="email" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {
+                                                                                                                          this.value = 'Email';
+                                                                                                                          }" style="margin-left: 10px">
+                        </div>
+                        <div class="to">
+                            <input type="text" name="web" class="text" value="Tu pagina Web" onfocus="this.value = '';" onblur="if (this.value == '') {
+                                                                                                                                this.value = 'Tu pagina Web';
+                                                                                                                                }">
+                            <input type="text" name="subject" class="text" value="Asunto" onfocus="this.value = '';" onblur="if (this.value == '') {
+                                                                                                                             this.value = 'Asunto';
+                                                                                                                             }" style="margin-left: 10px">
+                        </div>
+                        <div class="text">
+                            <textarea name="message" value="Mensaje:" onfocus="this.value = '';" onblur="if (this.value == '') {
+                                                                                                         this.value = 'Mensaje';
+                                                                                                         }">Mensaje:</textarea>
+                        </div>
+                        <div>
+                            <input type="submit" class="submit" value="Enviar">
+                        </div>
 
                         <?php echo form_close()?>
                     </div>
@@ -117,13 +117,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="footer">
             <div class="wrap">
                 <div class="copy">
-                    <p> © 2013 4Pets . All rights Reserved | Design by <a href="http://w3layouts.com">W3Layouts</a></p>
+                    <p> © 2015 ControlMascota. All rights Reserved | Design by <a href="http://www.hosting4world.com">EVS Tecnologias</a></p>
                 </div>
                 <ul class="follow_icon">
-                    <li><a href="#" style="opacity: 1;"><img src="<?= base_url() . 'assets/images_portada/fb.png' ?>" alt=""></a></li>
-                    <li><a href="#" style="opacity: 1;"><img src="<?= base_url() . 'assets/images_portada/tw.png' ?>" alt=""></a></li>
-                    <li><a href="#" style="opacity: 1;"><img src="<?= base_url() . 'assets/images_portada/rss.png' ?>" alt=""></a></li>
-                    <li><a href="#" style="opacity: 1;"><img src="<?= base_url() . 'assets/images_portada/g+.png' ?>" alt=""></a></li>
+                    <li><a href="#" style="opacity: 1;"><img src="<?php echo base_url() . 'assets/images_portada/fb.png' ?>" alt=""></a></li>
+                    <li><a href="#" style="opacity: 1;"><img src="<?php echo base_url() . 'assets/images_portada/tw.png' ?>" alt=""></a></li>
+                    <li><a href="#" style="opacity: 1;"><img src="<?php echo base_url() . 'assets/images_portada/rss.png' ?>" alt=""></a></li>
+                    <li><a href="#" style="opacity: 1;"><img src="<?php echo base_url() . 'assets/images_portada/g+.png' ?>" alt=""></a></li>
                 </ul>
                 <div class="clear"></div> 
             </div>

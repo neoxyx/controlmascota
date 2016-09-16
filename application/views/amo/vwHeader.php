@@ -9,18 +9,18 @@
         <title>Control Mascotas</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
+        <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href="<?= base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css' ?>" media="screen"></LINK>
-        <SCRIPT type="text/javascript" src="<?= base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js' ?>"></script>
+        <link href="<?php echo base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css' ?>" media="screen"></LINK>
+        <SCRIPT type="text/javascript" src="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js' ?>"></script>
         <!-- Add custom CSS here -->
-        <link href="<?= base_url() . 'assets/css/arkadmin.css' ?>" rel="stylesheet">
+        <link href="<?php echo base_url() . 'assets/css/arkadmin.css' ?>" rel="stylesheet">
         <!-- JavaScript -->
-        <script src="<?= base_url() . 'assets/js/jquery-1.10.2.js' ?>"></script>
-        <script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
-        <script src="<?= base_url() . 'assets/js/das.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/jquery-1.10.2.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/bootstrap.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/das.js' ?>"></script>
         <script language="javascript" type="text/javascript">
             $(document).ready(function () {
                 $(".subida").hide();
@@ -36,7 +36,7 @@
                 $("#pais").change(function () {
                     $("#pais option:selected").each(function () {
                         pais = $('#pais').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_provincias' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_provincias' ?>", {
                             pais: pais
                         }, function (data) {
                             $("#provincia").html(data);
@@ -50,7 +50,7 @@
                 $("#provincia").change(function () {
                     $("#provincia option:selected").each(function () {
                         provincia = $('#provincia').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_localidades' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_localidades' ?>", {
                             provincia: provincia
                         }, function (data) {
                             $("#localidad").html(data);
@@ -64,7 +64,7 @@
                 $("#especies").change(function () {
                     $("#especies option:selected").each(function () {
                         especies = $('#especies').val();
-                        $.post("<?= base_url() . 'index.php/amo/Mascotas/llena_razas' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/amo/Mascotas/llena_razas' ?>", {
                             especies: especies
                         }, function (data) {
                             $("#raza").html(data);
@@ -110,9 +110,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li><a href="<?= base_url() . 'index.php/amo/Dashboard' ?>"><i class="fa fa-dashboard"></i> Tablero</a></li>                                     
-                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/amo/Mascotas' ?>"><i class="fa fa-paw"></i> Mis Mascotas</a></li>
-                        <li <?php echo $pg == 'ofers ' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/amo/Ofertas' ?>"><i class="fa fa-newspaper-o"></i> Anuncios</a></li>
+                        <li><a href="<?php echo base_url() . 'index.php/amo/Dashboard' ?>"><i class="fa fa-dashboard"></i> Tablero</a></li>                                     
+                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/amo/Mascotas' ?>"><i class="fa fa-paw"></i> Mis Mascotas</a></li>
+                        <li <?php echo $pg == 'ofers ' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/amo/Ofertas' ?>"><i class="fa fa-newspaper-o"></i> Anuncios</a></li>
 
                     </ul>
 
@@ -138,11 +138,11 @@
                         <li class="dropdown user-dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?= base_url() . 'index.php/amo/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
+                                <li><a href="<?php echo base_url() . 'index.php/amo/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
 
 
                                 <li class = "divider"></li>
-                                <li><a href = "<?= base_url() . 'index.php/Login/logout' ?>"><i class = "fa fa-power-off"></i> Salir</a></li>
+                                <li><a href = "<?php echo base_url() . 'index.php/Login/logout' ?>"><i class = "fa fa-power-off"></i> Salir</a></li>
                             </ul>
                         </li>
                     </ul>

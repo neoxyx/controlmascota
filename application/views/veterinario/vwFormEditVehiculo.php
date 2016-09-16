@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Datos <small> Vehiculo</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/get_vehiculos' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/get_vehiculos' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Datos Vehiculo</li>
 
                 <div style="clear: both;"></div>
@@ -25,7 +25,7 @@ Downloaded from http://devzone.co.in
 
 
 
-    <form method="post" action="<?= base_url() . 'index.php/empresa/Perfil/update_vehiculo' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" action="<?php echo base_url() . 'index.php/empresa/Perfil/update_vehiculo' ?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
             <input type="hidden" name="user_id" value="<?php
             $query = $this->db->get_where('users', array('usuario' => $_SESSION['usuario']));
@@ -204,7 +204,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Documentación  <small></small></h1>               
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/conductor/Correo/send_mail' ?>"><button type="button" class="btn btn-warning">Enviar correo para solicitar cambio de documentos y/o datos</button></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/conductor/Correo/send_mail' ?>"><button type="button" class="btn btn-warning">Enviar correo para solicitar cambio de documentos y/o datos</button></a></li>
                 <!--<li class="active"><i class="icon-file-alt"></i> <select id="combito">
                         <option>Seleccione tipo de archivos</option>
                         <option value="1">Foto x Foto</option>
@@ -232,8 +232,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_soat' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="foto_soat" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_soat' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="foto_soat" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($vehiculo as $row) {
                     echo $row->soat;
                 }
@@ -259,8 +259,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_rtecno' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="foto_rtm" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_rtecno' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="foto_rtm" src="<?php echo base_url() ?>uploads/<?php
                 echo $row->rtecnomecanica
                 ?>" alt="Sin documento"/></div>
             <!--<div align="center">
@@ -284,8 +284,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_lict' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="foto_lict" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_lict' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="foto_lict" src="<?php echo base_url() ?>uploads/<?php
                 echo $row->licenciatransito
                 ?>" alt="Sin documento"/></div>
             <!--<div align="center">
@@ -309,8 +309,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_cedp' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="foto_cedp" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_cedp' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="foto_cedp" src="<?php echo base_url() ?>uploads/<?php
                 echo $row->cedulapropietario;
                 ?>" alt="Sin documento"/></div>
             <!--<div align="center">
@@ -334,8 +334,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_rutp' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="foto_rutp" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_rutp' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="foto_rutp" src="<?php echo base_url() ?>uploads/<?php
                 echo $row->rutpropietario
                 ?>" alt="Sin documento"/></div>
             <!--<div align="center">
@@ -359,8 +359,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_remolque' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="foto_remol" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_remolque' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="foto_remol" src="<?php echo base_url() ?>uploads/<?php
                 echo $row->remolque
                 ?>" alt="Sin documento"/></div>
             <!--<div align="center">
@@ -384,8 +384,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_carnet' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="foto_carnet" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_carnet' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="foto_carnet" src="<?php echo base_url() ?>uploads/<?php
                 echo $row->carnetafiliacion
                 ?>" alt="Sin documento"/></div>
             <!--<div align="center">
@@ -411,8 +411,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_pdf' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><h4>Documento actual: <a href="<?= base_url() . 'uploads/' . $row->pdf ?>"><?php
+        <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_pdf' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><h4>Documento actual: <a href="<?php echo base_url() . 'uploads/' . $row->pdf ?>"><?php
                         echo $row->pdf;
                         ?></a></h4></div>
 

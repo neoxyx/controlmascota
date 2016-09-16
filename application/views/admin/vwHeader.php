@@ -8,20 +8,20 @@
 
         <title>Enturne APP</title>
         <!-- Calendario-->
-        <link type="text/css" rel="stylesheet" href="<?= base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css' ?>" media="screen"></LINK>
-        <SCRIPT type="text/javascript" src="<?= base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js' ?>"></script>
+        <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css' ?>" media="screen"></LINK>
+        <SCRIPT type="text/javascript" src="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js' ?>"></script>
         <!-- Bootstrap core CSS -->
-        <link href="<?= base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
-        <link href="<?= base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
+        <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
+        <link href="<?php echo base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <!-- Add custom CSS here -->
-        <link href="<?= base_url() . 'assets/css/arkadmin.css' ?>" rel="stylesheet">
+        <link href="<?php echo base_url() . 'assets/css/arkadmin.css' ?>" rel="stylesheet">
         <!-- JavaScript -->
-        <script src="<?= base_url() . 'assets/js/jquery-1.10.2.js' ?>"></script>
-        <script src="<?= base_url() . 'assets/js/bootstrap.js' ?>"></script>
-        <script src="<?= base_url() . 'assets/js/das.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/jquery-1.10.2.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/bootstrap.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/das.js' ?>"></script>
         <script language="javascript" type="text/javascript">
             $(document).ready(function () {
                 $(".subida").hide();
@@ -37,7 +37,7 @@
                 $("#pais").change(function () {
                     $("#pais option:selected").each(function () {
                         pais = $('#pais').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_provincias' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_provincias' ?>", {
                             pais: pais
                         }, function (data) {
                             $("#provincia").html(data);
@@ -51,7 +51,7 @@
                 $("#provincia").change(function () {
                     $("#provincia option:selected").each(function () {
                         provincia = $('#provincia').val();
-                        $.post("<?= base_url() . 'index.php/Paises/llena_localidades' ?>", {
+                        $.post("<?php echo base_url() . 'index.php/Paises/llena_localidades' ?>", {
                             provincia: provincia
                         }, function (data) {
                             $("#localidad").html(data);
@@ -94,7 +94,7 @@
     </head>
 
     <body>
-        <?= @$error ?>
+        <?php echo @$error ?>
         <div id="wrapper">
 
             <!-- Sidebar -->
@@ -107,7 +107,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?= base_url() . 'index.php/admin/Dashboard' ?>">Enturne en linea S.A.S</a>
+                    <a class="navbar-brand" href="<?php echo base_url() . 'index.php/admin/Dashboard' ?>">Enturne en linea S.A.S</a>
                 </div>
                 <?php
 // Define a default Page
@@ -116,11 +116,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li <?php echo $pg == 'dash' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/admin/Dashboard' ?>"><i class="fa fa-dashboard"></i> Tablero</a></li>
-                        <li <?php echo $pg == 'opt' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/admin/Opciones' ?>"><i class="fa fa-cog fa-spin"></i> Opciones</a></li>              
-                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/admin/Users' ?>"><i class="fa fa-users"></i> Usuarios</a></li>
-                        <li <?php echo $pg == 'ofers' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/admin/Ofertas' ?>"><i class="fa fa-cart-plus"></i> Ofertas</a></li>
-                        <li <?php echo $pg == 'gps' ? 'class="active"' : '' ?>><a href="<?= base_url() . 'index.php/admin/Gps' ?>"><i class="fa fa-map-marker"></i> GPS</a></li>
+                        <li <?php echo $pg == 'dash' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/admin/Dashboard' ?>"><i class="fa fa-dashboard"></i> Tablero</a></li>
+                        <li <?php echo $pg == 'opt' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/admin/Opciones' ?>"><i class="fa fa-cog fa-spin"></i> Opciones</a></li>              
+                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/admin/Users' ?>"><i class="fa fa-users"></i> Usuarios</a></li>
+                        <li <?php echo $pg == 'ofers' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/admin/Ofertas' ?>"><i class="fa fa-cart-plus"></i> Ofertas</a></li>
+                        <li <?php echo $pg == 'gps' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/admin/Gps' ?>"><i class="fa fa-map-marker"></i> GPS</a></li>
 
 
                     </ul>
@@ -203,12 +203,12 @@
                                 ?> </i>    
                                 <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?= base_url() . 'index.php/admin/Perfil/get_perfil' ?>"><i class="fa fa-user"></i> Mi Perfil</a></li>
+                                <li><a href="<?php echo base_url() . 'index.php/admin/Perfil/get_perfil' ?>"><i class="fa fa-user"></i> Mi Perfil</a></li>
                                 <li><a href="#"><i class="fa fa-users"></i> Mis conductores <span class="badge">7</span></a></li>
                                 <li><a href="#"><i class="fa fa-save"></i> Registrar como conductor</a></li>
                                 <li><a href="#"><i class="fa fa-truck"></i> Vehiculos</a></li>
                                 <li class="divider"></li>
-                                <li><a href="<?= base_url() . 'index.php/Welcome/logout' ?>"><i class="fa fa-power-off"></i> Salir</a></li>
+                                <li><a href="<?php echo base_url() . 'index.php/Welcome/logout' ?>"><i class="fa fa-power-off"></i> Salir</a></li>
                             </ul>
                         </li>
                     </ul>

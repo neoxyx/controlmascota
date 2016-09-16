@@ -12,9 +12,9 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Productos <small>Listado</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/admin/Dashboard/licencias' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/admin/Dashboard/licencias' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Productos</li>
-                <a href="<?= base_url() . 'index.php/admin/Productos/add_producto' ?>"><button class="btn btn-primary" type="button" style="float:right;">Añadir Producto</button></a>
+                <a href="<?php echo base_url() . 'index.php/admin/Productos/add_producto' ?>"><button class="btn btn-primary" type="button" style="float:right;">Añadir Producto</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>

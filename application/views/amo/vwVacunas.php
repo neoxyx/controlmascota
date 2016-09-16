@@ -15,11 +15,11 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Vacunación <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/amo/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/amo/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Mis Vacunas</li>
 
 
-                <a href="<?= base_url() . 'index.php/amo/Mascotas/add_vacuna/'.$id_masc ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Añadir Vacuna</button></a>
+                <a href="<?php echo base_url() . 'index.php/amo/Mascotas/add_vacuna/'.$id_masc ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Añadir Vacuna</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>

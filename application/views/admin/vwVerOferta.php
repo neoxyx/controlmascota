@@ -41,7 +41,7 @@ Downloaded from http://devzone.co.in
     }
 </style>
 
-<script src="<?= base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
 <script type="text/javascript">
     function datos_marker(lat, lng, marker)
     {
@@ -50,7 +50,7 @@ Downloaded from http://devzone.co.in
         google.maps.event.trigger(marker, 'click');
     }
 </script>
-<?= $map['js'] ?>
+<?php echo $map['js'] ?>
 
 <div id="page-wrapper">
 
@@ -62,7 +62,7 @@ Downloaded from http://devzone.co.in
                 <li class="active"><i class="icon-file-alt"></i> Datos de oferta</li>
 
 
-                <a href="<?= base_url() . 'index.php/Admin/Ofertas' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Volver a ofertas</button></a>
+                <a href="<?php echo base_url() . 'index.php/Admin/Ofertas' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Volver a ofertas</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>
@@ -92,7 +92,7 @@ Downloaded from http://devzone.co.in
                 <?php
                 foreach ($oferta as $row) {
                     ?>
-                <form  action="<?= base_url() . 'index.php/admin/Ofertas/update_oferta/' . $row->id ?>"  method="post" >
+                <form  action="<?php echo base_url() . 'index.php/admin/Ofertas/update_oferta/' . $row->id ?>"  method="post" >
                     <tr>
                         <td><?php echo $row->origen ?></td>
                         <td><?php echo $row->destino ?></td>
@@ -105,7 +105,7 @@ Downloaded from http://devzone.co.in
                         <td><?php echo $row->contratados ?></td>
                         <td><?php /* echo $row->distancia */ ?></td>
                         <td><?php /* echo $row->tiempo */ ?></td>
-                        <td><input type='submit' class='btn btn-warning' id='edit' value="Editar"/><br><br><a href="<?= base_url() . 'index.php/empresa/Ofertas/delete_oferta/' . $row->id ?>"><button type="button" class="btn btn-danger" >Eliminar</button></a></br></br></td>
+                        <td><input type='submit' class='btn btn-warning' id='edit' value="Editar"/><br><br><a href="<?php echo base_url() . 'index.php/empresa/Ofertas/delete_oferta/' . $row->id ?>"><button type="button" class="btn btn-danger" >Eliminar</button></a></br></br></td>
                     </tr><?php
                 }
                 ?> 
@@ -130,13 +130,13 @@ Downloaded from http://devzone.co.in
                         <h3 class="panel-title"><i class="fa fa-map"></i> </h3>
                     </div>
                     <div class="panel-body">
-                        <div id="morris-chart-area"><?= $map['html'] ?>
+                        <div id="morris-chart-area"><?php echo $map['html'] ?>
                             <div id="sidebar">
                                 <ul>
                                     <?php
                                     foreach ($datos as $marker_sidebar) {
-                                        ?><li id="li_side" onclick="datos_marker(<?= $marker_sidebar->pos_y ?>,<?= $marker_sidebar->pos_x ?>, marker_<?= $marker_sidebar->id ?>)">
-                                            <?= $marker_sidebar->id; ?>&nbsp;&nbsp;<?= substr($marker_sidebar->infowindow, 0, 14) ?></li><?php
+                                        ?><li id="li_side" onclick="datos_marker(<?php echo $marker_sidebar->pos_y ?>,<?php echo $marker_sidebar->pos_x ?>, marker_<?php echo $marker_sidebar->id ?>)">
+                                            <?php echo $marker_sidebar->id; ?>&nbsp;&nbsp;<?php echo substr($marker_sidebar->infowindow, 0, 14) ?></li><?php
                                     }
                                     ?>
                                 </ul>

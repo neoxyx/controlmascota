@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Crear<small>Producto</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/admin/Productos' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/admin/Productos' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active">Producto</li>
 
                 <div style="clear: both;"></div>
@@ -23,14 +23,14 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-    <form method="post" enctype="multipart/form-data" action="<?= base_url() . 'index.php/admin/Productos/guardar_producto' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" enctype="multipart/form-data" action="<?php echo base_url() . 'index.php/admin/Productos/guardar_producto' ?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
             <label class="col-xs-3 control-label">Categoria</label>
             <div class="col-xs-4">
                 <select class="form-control" name="categoria">
                     <?php foreach ($cat as $fila) {
                         ?>
-                        <option value="<?= $fila->idc ?>"><?= $fila->descripcion ?></option>
+                        <option value="<?php echo $fila->idc ?>"><?php echo $fila->descripcion ?></option>
                         <?php
                     }
                     ?>	
@@ -65,7 +65,7 @@ Downloaded from http://devzone.co.in
                 <select class="form-control" name="idioma">
                     <?php foreach ($idioma as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->idioma ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->idioma ?></option>
                         <?php
                     }
                     ?>	
@@ -92,7 +92,7 @@ Downloaded from http://devzone.co.in
                 <select class="form-control" name="moneda_id">
                     <?php foreach ($moneda as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->moneda ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->moneda ?></option>
                         <?php
                     }
                     ?>	
@@ -106,7 +106,7 @@ Downloaded from http://devzone.co.in
                 <select class="form-control" name="moneda_id">
                     <?php foreach ($tax as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->titulo ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->titulo ?></option>
                         <?php
                     }
                     ?>	

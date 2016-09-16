@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Ver / Completar <small>Perfil</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/amo/Perfil/get_perfil' ?>"><i class="icon-dashboard"></i> Volver</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/amo/Perfil/get_perfil' ?>"><i class="icon-dashboard"></i> Volver</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Datos Personales</li>
 
                 <div style="clear: both;"></div>
@@ -25,7 +25,7 @@ Downloaded from http://devzone.co.in
 
 
 
-    <form method="post" action="<?= base_url() . 'index.php/amo/Perfil/edit_user' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" action="<?php echo base_url() . 'index.php/amo/Perfil/edit_user' ?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
             <label class="col-xs-3 control-label">Nombre Completo</label>
             <div class="col-xs-4">
@@ -146,7 +146,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($paises as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                         <?php
                     }
                     ?>	

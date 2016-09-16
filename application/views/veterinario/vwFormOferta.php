@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Crear <small> Oferta</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Ofertas' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Ofertas' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="fa fa-info"></i> Información</li>
 
                 <div style="clear: both;"></div>
@@ -23,7 +23,7 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-    <form method="post" action="<?= base_url() . 'index.php/empresa/Ofertas/guardar_oferta_empresa' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" action="<?php echo base_url() . 'index.php/empresa/Ofertas/guardar_oferta_empresa' ?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
             <?php
             $query = $this->db->get_where('users', array('usuario' => $_SESSION['usuario']));
@@ -53,7 +53,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($paises as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                         <?php
                     }
                     ?>	
@@ -87,7 +87,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($paises as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                         <?php
                     }
                     ?>	

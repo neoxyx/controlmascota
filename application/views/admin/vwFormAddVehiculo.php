@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Agregar <small> Vehiculo</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/admin/Vehiculos' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/admin/Vehiculos' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="fa fa-user"></i> Datos Propietario</li>
 
                 <div style="clear: both;"></div>
@@ -25,7 +25,7 @@ Downloaded from http://devzone.co.in
 
 
 
-    <form method="post" action="<?= base_url() . 'index.php/admin/Vehiculos/guardar_vehiculo' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" action="<?php echo base_url() . 'index.php/admin/Vehiculos/guardar_vehiculo' ?>" id="basicBootstrapForm" class="form-horizontal">
 
         <div class="form-group">
             <label class="col-xs-3 control-label">Propietario:</label>
@@ -55,7 +55,7 @@ Downloaded from http://devzone.co.in
         <div class="form-group">
             
             <div class="col-xs-12">
-                <b>Si el usuario no esta en la lista, crea uno</b> <a href="<?=base_url().'index.php/admin/Users/add_user'?>">Aqui</a>
+                <b>Si el usuario no esta en la lista, crea uno</b> <a href="<?php echo base_url().'index.php/admin/Users/add_user'?>">Aqui</a>
             </div>
         </div>
 
@@ -84,7 +84,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($paises as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                         <?php
                     }
                     ?>	
@@ -117,7 +117,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($tipov as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_tv ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_tv ?></option>
                         <?php
                     }
                     ?>	
@@ -133,7 +133,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($carr as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_carr ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_carr ?></option>
                         <?php
                     }
                     ?>	
@@ -204,7 +204,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($marca as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre ?></option>
                         <?php
                     }
                     ?>	

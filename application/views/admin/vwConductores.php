@@ -13,11 +13,11 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Enturne <small>Administrador</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/admin/Users' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/admin/Users' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="fa fa-users"></i> Datos Conductores</li>
 
 
-                <a href="<?= base_url() . 'index.php/admin/Conductores/add_conductor' ?>"><button class="btn btn-primary" type="button" style="float:right;" id="add_pais">Añadir Conductor</button></a>
+                <a href="<?php echo base_url() . 'index.php/admin/Conductores/add_conductor' ?>"><button class="btn btn-primary" type="button" style="float:right;" id="add_pais">Añadir Conductor</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>

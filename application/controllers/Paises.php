@@ -28,7 +28,7 @@ class Paises extends CI_Controller {
             $provincias = $this->Paises_model->provincias($pais);
             foreach ($provincias as $fila) {
                 ?>
-                <option value="<?= $fila->id ?>"><?= $fila->nombre_dpto ?></option>
+                <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_dpto ?></option>
                 <?php
             }
         }
@@ -41,7 +41,7 @@ class Paises extends CI_Controller {
             $localidades = $this->Paises_model->localidades($provincia);
             foreach ($localidades as $fila) {
                 ?>
-                <option value="<?= $fila->id ?>"><?= $fila->nombre_ciudad ?></option>
+                <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_ciudad ?></option>
                 <?php
             }
         }

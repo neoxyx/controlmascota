@@ -17,7 +17,7 @@ Downloaded from http://devzone.co.in
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 <!-- Page Specific CSS -->
 <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-<script src="<?= base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
 
 <div id="page-wrapper">
 
@@ -60,7 +60,7 @@ Downloaded from http://devzone.co.in
                         </div>
                     </div>
                 </div>
-                <a href="<?=base_url().'index.php/amo/Mascotas/get_vacunacion/'.$id_masc?>">
+                <a href="<?php echo base_url().'index.php/amo/Mascotas/get_vacunacion/'.$id_masc?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-8">
@@ -88,7 +88,7 @@ Downloaded from http://devzone.co.in
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/amo/Mascotas' ?>">
+                <a href="<?php echo base_url() . 'index.php/amo/Mascotas' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-8">
@@ -116,7 +116,7 @@ Downloaded from http://devzone.co.in
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/amo/Mascotas' ?>">
+                <a href="<?php echo base_url() . 'index.php/amo/Mascotas' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-8">
@@ -144,7 +144,7 @@ Downloaded from http://devzone.co.in
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/amo/Mascotas' ?>">
+                <a href="<?php echo base_url() . 'index.php/amo/Mascotas' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-8">
@@ -172,7 +172,7 @@ Downloaded from http://devzone.co.in
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/amo/Mascotas' ?>">
+                <a href="<?php echo base_url() . 'index.php/amo/Mascotas' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-8">

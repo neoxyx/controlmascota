@@ -9,7 +9,7 @@ $this->load->view('admin/vwHeader');
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 <!-- Page Specific CSS -->
 <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-<script src="<?= base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
 
 <div id="page-wrapper">
 
@@ -17,7 +17,7 @@ $this->load->view('admin/vwHeader');
         <div class="col-lg-12">
             <h1>Pendientes <small>Documentación</small></h1>
             <ol class="breadcrumb">
-                <a href="<?= base_url() . 'index.php/admin/Dashboard' ?>"><li class="active"><i class="fa fa-home"></i> </li></a>
+                <a href="<?php echo base_url() . 'index.php/admin/Dashboard' ?>"><li class="active"><i class="fa fa-home"></i> </li></a>
             </ol>
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -57,7 +57,7 @@ $this->load->view('admin/vwHeader');
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/Registros/pen_docs_empresa' ?>">
+                <a href="<?php echo base_url() . 'index.php/Registros/pen_docs_empresa' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">
@@ -91,7 +91,7 @@ $this->load->view('admin/vwHeader');
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/Registros/pend_docs_conductores' ?>">
+                <a href="<?php echo base_url() . 'index.php/Registros/pend_docs_conductores' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">
@@ -125,7 +125,7 @@ $this->load->view('admin/vwHeader');
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/Registros/pend_docs_vehiculos' ?>">
+                <a href="<?php echo base_url() . 'index.php/Registros/pend_docs_vehiculos' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">

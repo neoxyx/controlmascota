@@ -25,7 +25,7 @@
               $("#pais").change(function () {
                    $("#pais option:selected").each(function () {
                        pais = $('#pais').val();
-                       $.post("<?= base_url() . 'index.php/Paises/llena_provincias' ?>", {
+                       $.post("<?php echo base_url() . 'index.php/Paises/llena_provincias' ?>", {
                            pais: pais
                        }, function (data) {
                            $("#provincia").html(data);
@@ -39,7 +39,7 @@
               $("#provincia").change(function () {
                    $("#provincia option:selected").each(function () {
                        provincia = $('#provincia').val();
-                       $.post("<?= base_url() . 'index.php/Paises/llena_localidades' ?>", {
+                       $.post("<?php echo base_url() . 'index.php/Paises/llena_localidades' ?>", {
                            provincia: provincia
                        }, function (data) {
                            $("#localidad").html(data);
@@ -88,7 +88,7 @@
                                     <?php
                                     foreach ($paises as $fila) {
                                         ?>
-                                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                                         <?php
                                     }
                                     ?>
@@ -144,7 +144,7 @@
 
                                 <!--<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>-->
 
-                                    <li class="previous"><a href="<?= base_url() . 'index.php/Login' ?>"><span aria-hidden="true">&larr;</span> Volver</a></li>
+                                    <li class="previous"><a href="<?php echo base_url() . 'index.php/Login' ?>"><span aria-hidden="true">&larr;</span> Volver</a></li>
                                 </div>
                             </div>
                         </div>

@@ -12,7 +12,7 @@ http://www.hosting4world.com
         <div class="col-lg-12">
             <h1>Vehiculos <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/Registros/registros_pen_docs_total' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/Registros/registros_pen_docs_total' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="fa fa-paper-plane"></i> Pendientes Documentación</li>               
                 <div style="clear: both;"></div>
             </ol>

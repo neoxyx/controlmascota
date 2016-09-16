@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
     <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-    <script src="<?=  base_url().'assets/js/morris/chart-data-morris.js'?>"></script>
+    <script src="<?php echo  base_url().'assets/js/morris/chart-data-morris.js'?>"></script>
     
 <div id="page-wrapper">
 
@@ -40,7 +40,7 @@ Downloaded from http://devzone.co.in
                   </div>
                 </div>
               </div>
-                <a href="<?=base_url().'index.php/admin/Categorias'?>">
+                <a href="<?php echo base_url().'index.php/admin/Categorias'?>">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
@@ -66,7 +66,7 @@ Downloaded from http://devzone.co.in
                   </div>
                 </div>
               </div>
-              <a href="<?=base_url().'index.php/admin/Productos'?>">
+              <a href="<?php echo base_url().'index.php/admin/Productos'?>">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">

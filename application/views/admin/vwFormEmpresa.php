@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Empresa <small>Ver / Editar </small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/admin/Empresas' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/admin/Empresas' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="fa fa-building"></i> Datos Empresa</li>
 
                 <div style="clear: both;"></div>
@@ -23,7 +23,7 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
     
-    <form method="post" action="<?= base_url() . 'index.php/admin/Perfil/update_empresa' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" action="<?php echo base_url() . 'index.php/admin/Perfil/update_empresa' ?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
 
             <label class="col-xs-3 control-label">Nombre</label>
@@ -36,7 +36,7 @@ Downloaded from http://devzone.co.in
             </div> 
             <label class="col-xs-1 control-label">Logo</label>
             <div class="col-xs-4">
-                <img id="foto_carnet" src="<?= base_url() ?>uploads/<?php
+                <img id="foto_carnet" src="<?php echo base_url() ?>uploads/<?php
                 echo $key->logo
                 ?>" width="80px" height="50px" alt="Sin logo"/>
             </div> 
@@ -64,7 +64,7 @@ Downloaded from http://devzone.co.in
                     <?php
                     foreach ($paises as $fila) {
                         ?>
-                        <option value="<?= $fila->id ?>"><?= $fila->nombre_pais ?></option>
+                        <option value="<?php echo $fila->id ?>"><?php echo $fila->nombre_pais ?></option>
                         <?php
                     }
                     ?>	
@@ -153,7 +153,7 @@ Downloaded from http://devzone.co.in
         <div class = "form-group">
             <label class = "col-xs-3 control-label">Rut</label>
             <div class = "col-xs-4">
-                <a href="<?= base_url() . 'uploads/' . $key->rut ?>" target="parent"><?php
+                <a href="<?php echo base_url() . 'uploads/' . $key->rut ?>" target="parent"><?php
                     if ($key->rut) {
                         echo $key->rut;
                         ?></a><?php } else {
@@ -168,7 +168,7 @@ Downloaded from http://devzone.co.in
         <div class = "form-group">
             <label class = "col-xs-3 control-label">Camara de comercio</label>
             <div class = "col-xs-4">
-                <a href="<?= base_url() . 'uploads/' . $key->camaracomercio ?>" target="parent"><?php
+                <a href="<?php echo base_url() . 'uploads/' . $key->camaracomercio ?>" target="parent"><?php
                     if ($key->camaracomercio) {
                         echo $key->camaracomercio;
                         ?></a><?php } else {

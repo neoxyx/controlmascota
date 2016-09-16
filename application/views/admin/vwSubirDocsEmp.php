@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Subir / Ver  <small>Documentación Empresas</small></h1>               
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/Registros/registros_pen_docs_total' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/Registros/registros_pen_docs_total' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> <select id="combito">
                         <option>Seleccione tipo de archivos</option>
                         <option value="1">Foto x Foto</option>
@@ -40,8 +40,8 @@ Downloaded from http://devzone.co.in
             </div>
         </div><!-- /.row -->
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_rut' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="rut" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_rut' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="rut" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->rut;
                 }
@@ -66,8 +66,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-        <form action="<?= base_url() . 'index.php/Registros/subir_camaracomercio' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><img id="camara" src="<?= base_url() ?>uploads/<?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_camaracomercio' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><img id="camara" src="<?php echo base_url() ?>uploads/<?php
                 foreach ($registro as $row) {
                     echo $row->camaracomercio;
                 }
@@ -95,8 +95,8 @@ Downloaded from http://devzone.co.in
 
         <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
         <input type="hidden" name="pdf" value=""/>
-        <form action="<?= base_url() . 'index.php/Registros/subir_pdf_emp' ?>" enctype="multipart/form-data" method="post">
-            <div align="center"><h4>Documento actual: <a href="<?= base_url() . 'uploads/' . $row->pdf ?>"><?php
+        <form action="<?php echo base_url() . 'index.php/Registros/subir_pdf_emp' ?>" enctype="multipart/form-data" method="post">
+            <div align="center"><h4>Documento actual: <a href="<?php echo base_url() . 'uploads/' . $row->pdf ?>"><?php
                         echo $row->pdf;
                         ?></a></h4></div>
             <div align="center">                

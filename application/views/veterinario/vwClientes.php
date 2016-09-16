@@ -12,9 +12,9 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Clientes <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Clientes</li>
-                <a href="<?= base_url() . 'index.php/veterinario/Clientes/add_cliente' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Añadir Cliente</button></a>
+                <a href="<?php echo base_url() . 'index.php/veterinario/Clientes/add_cliente' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Añadir Cliente</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>
@@ -57,7 +57,7 @@ Downloaded from http://devzone.co.in
                             <td><?php echo $row->email ?></td>
                             <td><?php echo $row->nomocupa ?></td>
                             <td><?php echo $row->mescumple . "</br>" . $row->diacumple ?></td>
-                            <td><?= anchor(base_url() . 'index.php/veterinario/Clientes/form_clientes/' . $row->id_cliente, '<i class="fa fa-pencil fa-2x"></>', array('title' => 'Editar')) ?></td>
+                            <td><?php echo anchor(base_url() . 'index.php/veterinario/Clientes/form_clientes/' . $row->id_cliente, '<i class="fa fa-pencil fa-2x"></>', array('title' => 'Editar')) ?></td>
                         </tr>
                         <?php
                     }

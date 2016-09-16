@@ -12,11 +12,11 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Conductores <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Dashboard' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Dashboard' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Mis Conductores Actuales</li>
 
 
-                <a href="<?= base_url() . 'index.php/empresa/Perfil/get_conductores' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Conductores buscando empleo</button></a>
+                <a href="<?php echo base_url() . 'index.php/empresa/Perfil/get_conductores' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Conductores buscando empleo</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>
@@ -98,7 +98,7 @@ Downloaded from http://devzone.co.in
             <div class="col-lg-12">
                 <h1> <small></small></h1>
                 <ol class="breadcrumb">
-                    <li><a href="<?= base_url() . 'index.php/empresa/Dashboard' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
+                    <li><a href="<?php echo base_url() . 'index.php/empresa/Dashboard' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
                     <li class="active"><i class="icon-file-alt"></i> Mis Conductores Anteriores</li>
 
 

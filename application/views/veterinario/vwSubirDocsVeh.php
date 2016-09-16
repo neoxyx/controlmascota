@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Subir <small>Documentación</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> SOAT</li>               
                 <div style="clear: both;"></div>
             </ol>
@@ -24,8 +24,8 @@ Downloaded from http://devzone.co.in
 
 
 
-    <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_soat' ?>" enctype="multipart/form-data" method="post">
-        <div align="center"><img id="foto_soat" src="<?= base_url() ?>uploads/<?php
+    <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_soat' ?>" enctype="multipart/form-data" method="post">
+        <div align="center"><img id="foto_soat" src="<?php echo base_url() ?>uploads/<?php
             foreach ($doc as $row) {
                 echo $row->soat;
             }
@@ -41,7 +41,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1> <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Revisión Tecnomecanica</li>               
                 <div style="clear: both;"></div>
             </ol>
@@ -50,8 +50,8 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
     
-    <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_rtecno' ?>" enctype="multipart/form-data" method="post">
-        <div align="center"><img id="foto_rtm" src="<?= base_url() ?>uploads/<?php
+    <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_rtecno' ?>" enctype="multipart/form-data" method="post">
+        <div align="center"><img id="foto_rtm" src="<?php echo base_url() ?>uploads/<?php
                                  foreach ($rtec as $row) {
                                      echo $row->rtecnomecanica;
                                  }
@@ -67,7 +67,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1> <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Licencia de transito</li>               
                 <div style="clear: both;"></div>
             </ol>
@@ -76,8 +76,8 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
     
-    <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_lict' ?>" enctype="multipart/form-data" method="post">
-        <div align="center"><img id="foto_lict" src="<?= base_url() ?>uploads/<?php
+    <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_lict' ?>" enctype="multipart/form-data" method="post">
+        <div align="center"><img id="foto_lict" src="<?php echo base_url() ?>uploads/<?php
                                  foreach ($lict as $row) {
                                      echo $row->licenciatransito;
                                  }
@@ -93,7 +93,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1> <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Cedula del Propietario</li>               
                 <div style="clear: both;"></div>
             </ol>
@@ -102,8 +102,8 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
     
-    <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_cedp' ?>" enctype="multipart/form-data" method="post">
-        <div align="center"><img id="foto_cedp" src="<?= base_url() ?>uploads/<?php
+    <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_cedp' ?>" enctype="multipart/form-data" method="post">
+        <div align="center"><img id="foto_cedp" src="<?php echo base_url() ?>uploads/<?php
                                  foreach ($cedp as $row) {
                                      echo $row->cedulapropietario;
                                  }
@@ -119,7 +119,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1> <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> RUT del propietario</li>               
                 <div style="clear: both;"></div>
             </ol>
@@ -128,8 +128,8 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
     
-    <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_rutp' ?>" enctype="multipart/form-data" method="post">
-        <div align="center"><img id="foto_rutp" src="<?= base_url() ?>uploads/<?php
+    <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_rutp' ?>" enctype="multipart/form-data" method="post">
+        <div align="center"><img id="foto_rutp" src="<?php echo base_url() ?>uploads/<?php
                                  foreach ($rutp as $row) {
                                      echo $row->rutpropietario;
                                  }
@@ -145,7 +145,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1> <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/empresa/Perfil/comp_info' ?>">Volver Atras</a></li>
                 <li class="active"><i class="icon-file-alt"></i> Carnet de Afiliación</li>               
                 <div style="clear: both;"></div>
             </ol>
@@ -154,8 +154,8 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
     
-    <form action="<?= base_url() . 'index.php/empresa/Perfil/edit_foto_carnet' ?>" enctype="multipart/form-data" method="post">
-        <div align="center"><img id="foto_carnet" src="<?= base_url() ?>uploads/<?php
+    <form action="<?php echo base_url() . 'index.php/empresa/Perfil/edit_foto_carnet' ?>" enctype="multipart/form-data" method="post">
+        <div align="center"><img id="foto_carnet" src="<?php echo base_url() ?>uploads/<?php
                                  foreach ($carnet as $row) {
                                      echo $row->carnetafiliacion;
                                  }

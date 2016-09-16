@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
     <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-    <script src="<?=  base_url().'assets/js/morris/chart-data-morris.js'?>"></script>
+    <script src="<?php echo  base_url().'assets/js/morris/chart-data-morris.js'?>"></script>
     
 <div id="page-wrapper">
 
@@ -48,7 +48,7 @@ Downloaded from http://devzone.co.in
                   </div>
                 </div>
               </div>
-              <a href="<?=base_url().'index.php/admin/Perfil/get_perfil'?>">
+              <a href="<?php echo base_url().'index.php/admin/Perfil/get_perfil'?>">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
@@ -82,7 +82,7 @@ Downloaded from http://devzone.co.in
                   </div>
                 </div>
               </div>
-              <a href="<?=base_url().'index.php/admin/Empresas'?>">
+              <a href="<?php echo base_url().'index.php/admin/Empresas'?>">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
@@ -116,7 +116,7 @@ Downloaded from http://devzone.co.in
                   </div>
                 </div>
               </div>
-              <a href="<?=base_url().'index.php/admin/Conductores'?>">
+              <a href="<?php echo base_url().'index.php/admin/Conductores'?>">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
@@ -150,7 +150,7 @@ Downloaded from http://devzone.co.in
                   </div>
                 </div>
               </div>
-              <a href="<?=base_url().'index.php/admin/Vehiculos'?>">
+              <a href="<?php echo base_url().'index.php/admin/Vehiculos'?>">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">
@@ -185,7 +185,7 @@ Downloaded from http://devzone.co.in
                   </div>
                 </div>
               </div>
-              <a href="<?=base_url().'index.php/admin/Gps/get_users_gps'?>">
+              <a href="<?php echo base_url().'index.php/admin/Gps/get_users_gps'?>">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">

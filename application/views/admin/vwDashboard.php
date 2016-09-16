@@ -9,7 +9,7 @@ $this->load->view('admin/vwHeader');
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 <!-- Page Specific CSS -->
 <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-<script src="<?= base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
 
 <div id="page-wrapper">
 
@@ -57,7 +57,7 @@ $this->load->view('admin/vwHeader');
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/Registros/get_registros_ult_sem' ?>">
+                <a href="<?php echo base_url() . 'index.php/Registros/get_registros_ult_sem' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">
@@ -91,7 +91,7 @@ $this->load->view('admin/vwHeader');
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/Registros/get_registros_sin_val' ?>">
+                <a href="<?php echo base_url() . 'index.php/Registros/get_registros_sin_val' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">
@@ -129,7 +129,7 @@ $this->load->view('admin/vwHeader');
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/Registros/registros_pen_docs_total' ?>">
+                <a href="<?php echo base_url() . 'index.php/Registros/registros_pen_docs_total' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">
@@ -163,7 +163,7 @@ $this->load->view('admin/vwHeader');
                         </div>
                     </div>
                 </div>
-                <a href="<?= base_url() . 'index.php/Registros/registros_completos' ?>">
+                <a href="<?php echo base_url() . 'index.php/Registros/registros_completos' ?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">

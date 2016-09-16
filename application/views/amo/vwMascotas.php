@@ -12,11 +12,11 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Mis Mascotas <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/amo/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/amo/Dashboard' ?>"><i class="fa fa-home"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Mis Mascotas</li>
 
 
-                <a href="<?= base_url() . 'index.php/amo/Mascotas/add_mascota' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Añadir Mascota</button></a>
+                <a href="<?php echo base_url() . 'index.php/amo/Mascotas/add_mascota' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Añadir Mascota</button></a>
                 <div style="clear: both;"></div>
             </ol>
         </div>
@@ -57,9 +57,9 @@ Downloaded from http://devzone.co.in
                             <td><?php echo $row->sexo ?> </td>
                             <td><?php echo $row->esterilizado ?> </td>
                             <td><?php echo $row->alergias ?></td>
-                            <td><img id="foto_perfil" src="<?= base_url() ?>uploads/<?php echo $row->foto_mascota ?>"/></td>
-                            <td><?= anchor(base_url() . 'index.php/amo/Mascotas/historia_clinica/' . $row->id, '<i class="fa fa-stethoscope fa-2x"></>', array('title' => 'Historia Clinica')) ?></td>
-                            <td><?= anchor(base_url() . 'index.php/amo/Mascotas/edit_form/' . $row->id, '<i class="fa fa-pencil fa-2x"></>', array('title' => 'Editar')) ?></td>
+                            <td><img id="foto_perfil" src="<?php echo base_url() ?>uploads/<?php echo $row->foto_mascota ?>"/></td>
+                            <td><?php echo anchor(base_url() . 'index.php/amo/Mascotas/historia_clinica/' . $row->id, '<i class="fa fa-stethoscope fa-2x"></>', array('title' => 'Historia Clinica')) ?></td>
+                            <td><?php echo anchor(base_url() . 'index.php/amo/Mascotas/edit_form/' . $row->id, '<i class="fa fa-pencil fa-2x"></>', array('title' => 'Editar')) ?></td>
                         </tr>
                         <?php
                     }

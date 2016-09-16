@@ -12,11 +12,11 @@ Downloaded from http://devzone.co.in
           <div class="col-lg-12">
             <h1>Clinica <small></small></h1>
             <ol class="breadcrumb">
-              <li><a href="<?=base_url().'index.php/veterinario/Dashboard'?>"><i class="fa fa-home"></i></a></li>
+              <li><a href="<?php echo base_url().'index.php/veterinario/Dashboard'?>"><i class="fa fa-home"></i></a></li>
               <li class="active"><i class="icon-file-alt"></i> Lista de Personal</li>
               
               
-              <a href="<?=base_url().'index.php/veterinario/Perfil/add_user'?>"><button class="btn btn-primary" type="button" style="float:right;">Crear Personal</button></a>
+              <a href="<?php echo base_url().'index.php/veterinario/Perfil/add_user'?>"><button class="btn btn-primary" type="button" style="float:right;">Crear Personal</button></a>
               <div style="clear: both;"></div>
             </ol>
           </div>

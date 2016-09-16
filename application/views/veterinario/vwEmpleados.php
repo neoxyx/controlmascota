@@ -12,7 +12,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Empleados <small></small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/veterinario/Perfil/get_empleados' ?>"><i class="fa fa-home"></i></a></li>            
+                <li><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empleados' ?>"><i class="fa fa-home"></i></a></li>            
                 <div style="clear: both;"></div>
             </ol>
         </div>

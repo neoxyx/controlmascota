@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Paises <small>Listado</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url().'index.php/admin/Dashboard/config'?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url().'index.php/admin/Dashboard/config'?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Paises</li>
 
 

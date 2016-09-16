@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 <!-- Page Specific CSS -->
 <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-<script src="<?= base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
+<script src="<?php echo base_url() . 'assets/js/morris/chart-data-morris.js' ?>"></script>
 
 <div id="page-wrapper">
 
@@ -21,7 +21,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Completar <small>Registro</small></h1>
             <ol class="breadcrumb">
-                <li class="active"><a href="<?=base_url().'index.php/empresa/Dashboard'?>"<i class="fa fa-home"></a></i></li>
+                <li class="active"><a href="<?php echo base_url().'index.php/empresa/Dashboard'?>"<i class="fa fa-home"></a></i></li>
             </ol>
             
         </div>
@@ -41,7 +41,7 @@ Downloaded from http://devzone.co.in
                         </div>
                     </div>
                 </div>
-                <a href="<?=base_url().'index.php/empresa/Perfil/get_emp'?>">
+                <a href="<?php echo base_url().'index.php/empresa/Perfil/get_emp'?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">
@@ -69,7 +69,7 @@ Downloaded from http://devzone.co.in
                         </div>
                     </div>
                 </div>
-                <a href="<?=base_url().'index.php/empresa/Perfil/adj_doc'?>">
+                <a href="<?php echo base_url().'index.php/empresa/Perfil/adj_doc'?>">
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-6">

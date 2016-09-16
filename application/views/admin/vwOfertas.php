@@ -16,7 +16,7 @@ Downloaded from http://devzone.co.in
               <li class="active"><i class="icon-file-alt"></i> Ofertas de carga</li>
               
               
-              <a href="<?= base_url() . 'index.php/admin/Ofertas/crear_oferta' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Crear Oferta</button></a>
+              <a href="<?php echo base_url() . 'index.php/admin/Ofertas/crear_oferta' ?>"><button class="btn btn-info" type="button" style="float:right;" id="add_pais">Crear Oferta</button></a>
               <div style="clear: both;"></div>
             </ol>
           </div>

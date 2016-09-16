@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Datos <small> Registro</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/Registros/get_registros_ult_sem' ?>"><i class="fa fa-level-up"></i></a></li>
+                <li><a href="<?php echo base_url() . 'index.php/Registros/get_registros_ult_sem' ?>"><i class="fa fa-level-up"></i></a></li>
                 <li class="active"><i class="fa fa-registered"></i> Datos de registro</li>
 
                 <div style="clear: both;"></div>
@@ -25,7 +25,7 @@ Downloaded from http://devzone.co.in
 
 
 
-    <form method="post" action="<?=base_url().'index.php/Registros/activar_registro'?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" action="<?php echo base_url().'index.php/Registros/activar_registro'?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
             <input type="hidden" name="id" value="<?php
             foreach ($registro as $fila) {

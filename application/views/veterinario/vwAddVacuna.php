@@ -16,7 +16,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Añadir <small> Vacuna</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?= base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
+                <li><a href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="icon-dashboard"></i> Volver Atras</a></li>
                 <div style="clear: both;"></div>
             </ol>
         </div>
@@ -24,7 +24,7 @@ Downloaded from http://devzone.co.in
 
     <div id="dialog_mi_popup" style="display: none" title="Nueva Ventana"></div>
 
-    <form method="post" action="<?= base_url() . 'index.php/veterinario/Pacientes/guardar_vacuna' ?>" id="basicBootstrapForm" class="form-horizontal">
+    <form method="post" action="<?php echo base_url() . 'index.php/veterinario/Pacientes/guardar_vacuna' ?>" id="basicBootstrapForm" class="form-horizontal">
         <div class="form-group">
             <label class="col-xs-3 control-label">Marca</label>
             <div class="col-xs-4">

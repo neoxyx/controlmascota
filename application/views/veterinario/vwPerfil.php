@@ -13,7 +13,7 @@ Downloaded from http://devzone.co.in
         <div class="col-lg-12">
             <h1>Perfil <small>Veterinario</small></h1>
             <ol class="breadcrumb">
-                <li><a href="<?=base_url().'index.php/veterinario/Dashboard'?>"><i class="fa fa-home"></i></a></li>
+                <li><a href="<?php echo base_url().'index.php/veterinario/Dashboard'?>"><i class="fa fa-home"></i></a></li>
                 <li class="active"><i class="icon-file-alt"></i> Datos Personales</li>
                 <div style="clear: both;"></div>
             </ol>
@@ -58,8 +58,8 @@ Downloaded from http://devzone.co.in
         </table>
 
     </div>
-    <form action="<?= base_url() . 'index.php/veterinario/Perfil/edit_foto_user' ?>" enctype="multipart/form-data" method="post">
-        <div align="center"><img id="foto_perfil" src="<?= base_url() ?>uploads/<?php echo $row->foto_ruta ?>" /></div>
+    <form action="<?php echo base_url() . 'index.php/veterinario/Perfil/edit_foto_user' ?>" enctype="multipart/form-data" method="post">
+        <div align="center"><img id="foto_perfil" src="<?php echo base_url() ?>uploads/<?php echo $row->foto_ruta ?>" /></div>
         <div align="center">
             <label>Seleccione examinar si desea cambiar su foto de perfil y click en actualizar</label>
             <input type="file"  name="userfile" />
