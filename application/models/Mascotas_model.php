@@ -76,19 +76,19 @@ class Mascotas_model extends CI_Model {
         }
     }
 
-    public function add_mascota() {
+    public function add_mascota($nombre,$fecha_nac,$especies,$raza,$sexo,$esteril,$alergias,$chip,$fecha_chip) {
         $iduser = $_SESSION['iduser'];
         $this->db->insert("mascotas", array(
-            'nombre' => $this->input->post("nombre", TRUE),
-            'id_especie' => $this->input->post('especies'),
-            'id_raza' => $this->input->post('raza'),
-            'sexo' => $this->input->post('gender'),
-            'fecha_nacimiento' => $this->input->post('fecha_nac'),
-            'esterilizado' => $this->input->post('esteril'),
-            'alergias' => $this->input->post('alergias'),
+            'nombre' => $nombre,
+            'id_especie' => $especies,
+            'id_raza' => $raza,
+            'sexo' => $sexo,
+            'fecha_nacimiento' => $fecha_nac,
+            'esterilizado' => $esteril,
+            'alergias' => $alergias,
             'id_amo' => $iduser,
-            'id_chip' => $this->input->post('chip'),
-            'fecha_chip' => $this->input->post('fecha_chip'),
+            'id_chip' => $chip,
+            'fecha_chip' => $fecha_chip,
             'created_at' => date('Y-m-d H:i:s')
         ));
 

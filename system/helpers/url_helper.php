@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 // ------------------------------------------------------------------------
 
-if ( ! function_exists('site_url'))
+if ( ! function_exists('bas_url'))
 {
 	/**
 	 * Site URL
@@ -61,9 +61,9 @@ if ( ! function_exists('site_url'))
 	 * @param	string	$protocol
 	 * @return	string
 	 */
-	function site_url($uri = '', $protocol = NULL)
+	function bas_url($uri = '', $protocol = NULL)
 	{
-		return get_instance()->config->site_url($uri, $protocol);
+		return get_instance()->config->bas_url($uri, $protocol);
 	}
 }
 
@@ -75,7 +75,7 @@ if ( ! function_exists('base_url'))
 	 * Base URL
 	 *
 	 * Create a local URL based on your basepath.
-	 * Segments can be passed in as a string or an array, same as site_url
+	 * Segments can be passed in as a string or an array, same as bas_url
 	 * or a URL to a file can be passed in, e.g. to an image file.
 	 *
 	 * @param	string	$uri
@@ -103,7 +103,7 @@ if ( ! function_exists('current_url'))
 	function current_url()
 	{
 		$CI =& get_instance();
-		return $CI->config->site_url($CI->uri->uri_string());
+		return $CI->config->bas_url($CI->uri->uri_string());
 	}
 }
 
@@ -159,13 +159,13 @@ if ( ! function_exists('anchor'))
 	{
 		$title = (string) $title;
 
-		$site_url = is_array($uri)
-			? site_url($uri)
-			: (preg_match('#^(\w+:)?//#i', $uri) ? $uri : site_url($uri));
+		$bas_url = is_array($uri)
+			? bas_url($uri)
+			: (preg_match('#^(\w+:)?//#i', $uri) ? $uri : bas_url($uri));
 
 		if ($title === '')
 		{
-			$title = $site_url;
+			$title = $bas_url;
 		}
 
 		if ($attributes !== '')
@@ -173,7 +173,7 @@ if ( ! function_exists('anchor'))
 			$attributes = _stringify_attributes($attributes);
 		}
 
-		return '<a href="'.$site_url.'"'.$attributes.'>'.$title.'</a>';
+		return '<a href="'.$bas_url.'"'.$attributes.'>'.$title.'</a>';
 	}
 }
 
@@ -195,16 +195,16 @@ if ( ! function_exists('anchor_popup'))
 	function anchor_popup($uri = '', $title = '', $attributes = FALSE)
 	{
 		$title = (string) $title;
-		$site_url = preg_match('#^(\w+:)?//#i', $uri) ? $uri : site_url($uri);
+		$bas_url = preg_match('#^(\w+:)?//#i', $uri) ? $uri : bas_url($uri);
 
 		if ($title === '')
 		{
-			$title = $site_url;
+			$title = $bas_url;
 		}
 
 		if ($attributes === FALSE)
 		{
-			return '<a href="'.$site_url.'" onclick="window.open(\''.$site_url."', '_blank'); return false;\">".$title.'</a>';
+			return '<a href="'.$bas_url.'" onclick="window.open(\''.$bas_url."', '_blank'); return false;\">".$title.'</a>';
 		}
 
 		if ( ! is_array($attributes))
@@ -232,8 +232,8 @@ if ( ! function_exists('anchor_popup'))
 
 		$attributes = _stringify_attributes($attributes);
 
-		return '<a href="'.$site_url
-			.'" onclick="window.open(\''.$site_url."', '".$window_name."', '"._stringify_attributes($atts, TRUE)."'); return false;\""
+		return '<a href="'.$bas_url
+			.'" onclick="window.open(\''.$bas_url."', '".$window_name."', '"._stringify_attributes($atts, TRUE)."'); return false;\""
 			.$attributes.'>'.$title.'</a>';
 	}
 }
@@ -533,7 +533,7 @@ if ( ! function_exists('redirect'))
 	{
 		if ( ! preg_match('#^(\w+:)?//#i', $uri))
 		{
-			$uri = site_url($uri);
+			$uri = bas_url($uri);
 		}
 
 		// IIS environment likely? Use 'refresh' for better compatibility

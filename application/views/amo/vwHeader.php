@@ -7,20 +7,26 @@
         <meta name="author" content="abhishek@devzone.co.in">
 
         <title>Control Mascotas</title>
-
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css/calendar/jquery-ui.css'?>" />
+        <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.js' ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery-ui-1.12.1/jquery-ui.js' ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.ui.datepicker-es.js' ?>"></script>
         <!-- Bootstrap core CSS -->
         <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href="<?php echo base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.css' ?>" media="screen"></LINK>
-        <SCRIPT type="text/javascript" src="<?php echo base_url() . 'assets/dhtmlgoodies_calendar/dhtmlgoodies_calendar/dhtmlgoodies_calendar.js' ?>"></script>
+        <script src="<?php echo base_url() . 'assets/js/bootstrap.js' ?>"></script>
         <!-- Add custom CSS here -->
         <link href="<?php echo base_url() . 'assets/css/arkadmin.css' ?>" rel="stylesheet">
         <!-- JavaScript -->
-        <script src="<?php echo base_url() . 'assets/js/jquery-1.10.2.js' ?>"></script>
-        <script src="<?php echo base_url() . 'assets/js/bootstrap.js' ?>"></script>
         <script src="<?php echo base_url() . 'assets/js/das.js' ?>"></script>
+        <link href="<?php echo base_url() . 'assets/css/img.css' ?>" rel="stylesheet">
+        <!-- alertify -->
+        <link href="<?php echo base_url() . 'assets/css/alertify.min.css'?>" rel="stylesheet" type="text/css">
+        <script src="<?php echo base_url() . 'assets/js/alertify.min.js'?>"></script>
+        <!-- funciones -->
+        <script src="<?php echo base_url() . 'assets/js/mascotas.js'?>"></script>
+
         <script language="javascript" type="text/javascript">
             $(document).ready(function () {
                 $(".subida").hide();
@@ -30,7 +36,6 @@
                 });
             });
         </script>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $("#pais").change(function () {
@@ -75,14 +80,14 @@
         </script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-          <script src="<?php echo HTTP_JS_PATH; ?>html5shiv.js"></script>
-          <script src="<?php echo HTTP_JS_PATH; ?>respond.min.js"></script>
-        <![endif]-->
+<script src="<?php echo HTTP_JS_PATH; ?>html5shiv.js"></script>
+<script src="<?php echo HTTP_JS_PATH; ?>respond.min.js"></script>
+<![endif]-->
         <!--  
-    
-    Author : Abhishek R. Kaushik 
-    Downloaded from http://devzone.co.in
-        -->
+
+Author : Abhishek R. Kaushik 
+Downloaded from http://devzone.co.in
+-->
 
     </head>
 
@@ -104,7 +109,7 @@
                         <i class="fa fa-paw"> Control Mascotas</i></div>
                 </div>
                 <?php
-// Define a default Page
+                // Define a default Page
                 $pg = isset($page) && $page != '' ? $page : 'dash';
                 ?>
                 <!-- Collect the nav links, forms, and other content for toggling -->

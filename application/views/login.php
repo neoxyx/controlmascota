@@ -6,17 +6,6 @@
         <title>Control Mascotas V 1.0.0</title>
         <!--link the bootstrap css file-->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-        <!-- alertify -->
-         <link href="<?php echo site_url() ?>asset/css/alertify.min.css" rel="stylesheet" type="text/css">
-        <!--load jQuery library-->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <!--load bootstrap.js-->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <!-- alertify -->
-        <script src="<?php echo site_url() ?>asset/js/alertify.min.js"></script>
-        <!-- calendar -->
-        <script src="<?php echo site_url()?>asset/js/calendar/jquery-ui.js"></script>
-        <link rel="stylesheet" type="text/css" href="<?php echo site_url()?>asset/css/calendar/jquery-ui.css">
 
         <style type="text/css">
             body{
@@ -104,6 +93,11 @@
             <?php echo form_close(); ?>
 
         </div>
+
+        <!--load jQuery library-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!--load bootstrap.js-->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </body>
 </html>
 
