@@ -144,8 +144,6 @@ Downloaded from http://devzone.co.in
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo base_url() . 'index.php/amo/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
-
-
                                 <li class = "divider"></li>
                                 <li><a href = "<?php echo base_url() . 'index.php/Login/logout' ?>"><i class = "fa fa-power-off"></i> Salir</a></li>
                             </ul>

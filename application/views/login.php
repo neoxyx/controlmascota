@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Control Mascotas V 1.0.0</title>
         <!--link the bootstrap css file-->
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
+        <link href="<?php echo base_url().'assets/css/bootstrap.css'?>" rel="stylesheet">
+        <!--load jQuery library-->
+        <script src="<?php echo base_url().'assets/js/jquery.js'?>"></script>
+        <!--load bootstrap.js-->
+        <script src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
         <style type="text/css">
             body{
                 background-image: url('../assets/images_portada/fondo_login.jpg')
@@ -93,11 +96,6 @@
             <?php echo form_close(); ?>
 
         </div>
-
-        <!--load jQuery library-->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <!--load bootstrap.js-->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </body>
 </html>
 

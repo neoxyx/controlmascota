@@ -87,13 +87,13 @@ class Login extends CI_Controller {
                     $data = array('mensaje' => 'El usuario no existe, registrese si lo desea o comuniquese con Control Mascota');
                     $this->load->view('login', $data);
                 }
-                else{
+                /*else{
                    //crear la variable de sesion para hallar el id del usuario loqueado
                    $result = $this->Registros_model->get_iduser($_SESSION['usuario']) ;
                    $this->session->set_userdata('iduser',$result->id);
                    $this->session->set_userdata('idempresa',$result->id_empresa);
                
-               }
+               }*/
             }
         } else {
             redirect() . base_url('index.php/Login');
