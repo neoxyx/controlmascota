@@ -12,10 +12,10 @@ class Login_model extends CI_Model {
         parent::__construct();
     }
 
-    public function very_sesion_admin() {
+    public function very_sesion_admin($usuario,$passw) {
 
-        $consulta = $this->db->get_where('users', array('usuario' => $this->input->post('username', TRUE),
-            'pass' => md5($this->input->post('password', TRUE)), 'nivel' => 'Administrador'));
+        $consulta = $this->db->get_where('users', array('usuario' => $usuario,
+            'pass' => md5($passw), 'nivel' => 'Administrador'));
 
         if ($consulta->num_rows() == 1) {
             return $consulta->result();
@@ -24,9 +24,9 @@ class Login_model extends CI_Model {
         }
     }
 
-    public function very_sesion_veterinario() {
-        $consulta = $this->db->get_where('users', array('usuario' => $this->input->post('username', TRUE),
-            'pass' => md5($this->input->post('password', TRUE)), 'nivel' => 'Veterinario'));
+    public function very_sesion_veterinario($usuario,$passw) {
+        $consulta = $this->db->get_where('users', array('usuario' => $usuario,
+            'pass' => md5($passw), 'nivel' => 'Veterinario'));
 
         if ($consulta->num_rows() == 1) {
             return TRUE;
@@ -35,9 +35,9 @@ class Login_model extends CI_Model {
         }
     }
 
-    public function very_sesion_amo() {
-        $consulta = $this->db->get_where('users', array('usuario' => $this->input->post('username', TRUE),
-            'pass' => md5($this->input->post('password', TRUE)), 'nivel' => 'Amo'));
+    public function very_sesion_amo($usuario,$passw) {
+        $consulta = $this->db->get_where('users', array('usuario' => $usuario,
+            'pass' => md5($passw), 'nivel' => 'Amo'));
 
         if ($consulta->num_rows() == 1) {
             return TRUE;

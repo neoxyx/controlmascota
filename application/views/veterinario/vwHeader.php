@@ -1,3 +1,12 @@
+<?php
+$session_data = $this->session->userdata('datos_usuario');
+$usuario = $session_data['usuario'];
+$nombre = $session_data['nombre'];
+$ape = $session_data['ape'];
+if(!$session_data ){
+    redirect('Login');
+}  
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,13 +16,12 @@
         <meta name="author" content="abhishek@devzone.co.in">
 
         <title>Control Mascotas</title>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css/calendar/jquery-ui.css'?>" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css/calendar/jquery-ui.css'?>" />
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.js' ?>"></script>
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery-ui-1.12.1/jquery-ui.js' ?>"></script>
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.ui.datepicker-es.js' ?>"></script>
         <!-- Bootstrap core CSS -->
         <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <script src="<?php echo base_url() . 'assets/js/bootstrap.js' ?>"></script>
         <!-- Add custom CSS here -->
@@ -143,20 +151,20 @@
         </script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-          <script src="<?php echo HTTP_JS_PATH; ?>html5shiv.js"></script>
-          <script src="<?php echo HTTP_JS_PATH; ?>respond.min.js"></script>
-        <![endif]-->
+<script src="<?php echo HTTP_JS_PATH; ?>html5shiv.js"></script>
+<script src="<?php echo HTTP_JS_PATH; ?>respond.min.js"></script>
+<![endif]-->
         <!--
 
-    Author : Abhishek R. Kaushik
-    Downloaded from http://devzone.co.in
-        -->
+Author : Abhishek R. Kaushik
+Downloaded from http://devzone.co.in
+-->
 
     </head>
 
     <body>
         <?php
-        $consulta = $this->db->get_where('users', array('usuario' => $_SESSION['usuario']));
+        $consulta = $this->db->get_where('users', array('usuario' => $usuario));
         if ($consulta->num_rows() != 0) {
             foreach ($consulta->result() as $row) {
                 $permiso = $row->permisos;
@@ -179,8 +187,8 @@
                     <a class="navbar-brand" href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>">Control Mascotas</a>
                 </div>
                 <?php
-// Define a default Page
-                $pg = isset($page) && $page != '' ? $page : 'dash';
+    // Define a default Page
+    $pg = isset($page) && $page != '' ? $page : 'dash';
                 ?>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -213,7 +221,7 @@
                         </li>
 
                         <li class="dropdown user-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $usuario ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
                                 <li><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>"><i class="fa fa-hospital-o"></i> Mi Clinica </a><?php } else { ?><a href="#"><i class="fa fa-building"></i> Mi empresa </a><?php } ?></li>

@@ -128,9 +128,8 @@ class Veterinaria_model extends CI_Model {
         }
     }
 
-    public function get_veterinaria() {
-        $user = $_SESSION['usuario'];
-        $SqlInfo = "select t1.id,t1.nombre,t1.apellidos,t2.id,t2.nombre_empresa,t2.siglas,t2.nit,t2.ciudad_id,t2.direccion,t2.telefono,t2.fax,t2.email,t2.web,t2.rlegal,t2.rut,t2.camaracomercio,t2.logo,t2.created_at,t2.updated_at,t3.nombre_ciudad FROM users t1, sf_empresa t2 JOIN df_ciudades t3 ON t2.ciudad_id=t3.id WHERE t1.usuario='$user' AND t2.id=t1.id_empresa ";
+    public function get_veterinaria($usuario) {
+        $SqlInfo = "select t1.id,t1.nombre,t1.apellidos,t2.id,t2.nombre_empresa,t2.siglas,t2.nit,t2.ciudad_id,t2.direccion,t2.telefono,t2.fax,t2.email,t2.web,t2.rlegal,t2.rut,t2.camaracomercio,t2.logo,t2.created_at,t2.updated_at,t3.nombre_ciudad FROM users t1, sf_empresa t2 JOIN df_ciudades t3 ON t2.ciudad_id=t3.id WHERE t1.usuario='$usuario' AND t2.id=t1.id_empresa ";
         $query = $this->db->query($SqlInfo);
 
         if ($query->num_rows() > 0) {

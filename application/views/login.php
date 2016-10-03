@@ -6,10 +6,16 @@
         <title>Control Mascotas V 1.0.0</title>
         <!--link the bootstrap css file-->
         <link href="<?php echo base_url().'assets/css/bootstrap.css'?>" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!--load jQuery library-->
         <script src="<?php echo base_url().'assets/js/jquery.js'?>"></script>
         <!--load bootstrap.js-->
         <script src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
+        <!-- alertify -->
+        <link href="<?php echo base_url() . 'assets/css/alertify.min.css'?>" rel="stylesheet" type="text/css">
+        <script src="<?php echo base_url() . 'assets/js/alertify.min.js'?>"></script>
+        <!-- funciones -->
+        <script src="<?php echo base_url() . 'assets/js/login.js'?>"></script>
         <style type="text/css">
             body{
                 background-image: url('../assets/images_portada/fondo_login.jpg')
@@ -36,64 +42,59 @@
                     <div style="padding-top:30px" class="panel-body" >
 
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-                        <?php echo '<h5 style="color:red">' . validation_errors() . '</h5>'; ?>
-                        <?php echo '<h4 style="color:red">' . $mensaje . '</h4>' ?>
-                        <?php
-                        $attributes = array("class" => "form-horizontal", "id" => "loginform", "name" => "loginform");
-                        echo form_open("Login/very_sesion", $attributes);
-                        ?>
-                        <div style="margin-bottom: 25px" class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input id="login-username" type="text" class="form-control" name="username" value="<?php echo set_value('username'); ?>" placeholder="Usuario">                                        
-                        </div>
-
-                        <div style="margin-bottom: 25px" class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                            <input id="login-password" type="password" class="form-control" name="password" value="<?php echo set_value('password'); ?>" placeholder="Contraseña">
-                        </div>
-
-
-
-                        <div class="input-group">
-                            <div class="checkbox">
-                                <label>
-                                    <input id="login-remember" type="checkbox" name="remember" value="1"> Recordarme
-                                </label>
+                        <form method="post" action="javascript:login()" id="loginForm" class="form-horizontal">
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="username" type="text" class="form-control" name="username" value="<?php echo set_value('username'); ?>" placeholder="Usuario" required>                                        
                             </div>
-                        </div>
 
-
-                        <div style="margin-top:10px" class="form-group">
-                            <!-- Button -->
-
-                            <div class="col-sm-12 controls">
-                                <div class="pager">
-                                    <input type="submit" id="btn-login" class="btn btn-success" name="submit_login" value="Ingresar"/>
-
-                                    <!--<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>-->
-
-
-                                    <li class="previous"><a href="<?php echo base_url() . 'index.php/Portal' ?>"><span aria-hidden="true">&larr;</span> Volver</a></li>                                        
-                                </div>
-
+                            <div style="margin-bottom: 25px" class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="password" type="password" class="form-control" name="password" value="<?php echo set_value('password'); ?>" placeholder="Contraseña" required>
                             </div>
-                        </div>
 
 
-                        <div class="form-group">
-                            <div class="col-md-12 control">
-                                <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
-                                    <h4>No tengo cuenta!</h4> 
-                                    <a href="<?php echo base_url() . 'index.php/Registros' ?>">
-                                        <h3>Registrarme</h3>
-                                    </a>
+
+                            <div class="input-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="login-remember" type="checkbox" name="remember" value="1"> Recordarme
+                                    </label>
                                 </div>
                             </div>
-                        </div>                             
-                    </div>                     
-                </div> 
-            </div>
-            <?php echo form_close(); ?>
+
+
+                            <div style="margin-top:10px" class="form-group">
+                                <!-- Button -->
+
+                                <div class="col-sm-12 controls">
+                                    <div class="pager">
+                                        <input type="submit" id="btn-login" class="btn btn-success" name="submit_login" value="Ingresar"/>
+
+                                        <!--<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>-->
+
+
+                                        <li class="previous"><a href="<?php echo base_url() . 'index.php/Portal' ?>"><span aria-hidden="true">&larr;</span> Volver</a></li>                                        
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-12 control">
+                                    <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                        <h4>No tengo cuenta!</h4> 
+                                        <a href="<?php echo base_url() . 'index.php/Registros' ?>">
+                                            <h3>Registrarme</h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                             
+                            </div>                     
+                    </div> 
+                </div>
+                </form>
 
         </div>
     </body>

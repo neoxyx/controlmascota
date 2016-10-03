@@ -25,20 +25,7 @@ Downloaded from http://devzone.co.in
             </ol>
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                Bienvenido(a) <?php
-                $cons = $this->db->get_where('users', array('usuario' => $_SESSION['usuario']));
-                if ($cons->num_rows() != 0) {
-                    foreach ($cons->result() as $row) {
-                        echo $row->nombre . " " . $row->apellidos;
-                        $cont = $row->id;
-
-                        //$conductores = $this->db->get_where('mascotas', array('id_amo' => $cont)); // get query result
-                        $conductores = $this->db->query('select * from mascotas where id_amo='. $cont . ' order by nombre'); // get query result
-                        $count1 = $conductores->num_rows(); //get current query record.
-
-                    }
-                }
-                ?>
+                Bienvenido(a) <?php echo $nombre?>
             </div>
         </div>
     </div><!-- /.row -->

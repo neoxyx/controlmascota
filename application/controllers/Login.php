@@ -16,87 +16,84 @@ class Login extends CI_Controller {
     }
 
     public function very_sesion() {
+        $usuario = $this->input->post('usuario');
+        $passw = $this->input->post('passw');
 
-        $variable = $this->Login_model->very_sesion_admin();
-        $variable1 = $this->Login_model->very_sesion_veterinario();
-        $variable2 = $this->Login_model->very_sesion_amo();
+        $variable = $this->Login_model->very_sesion_admin($usuario,$passw);
+        $variable1 = $this->Login_model->very_sesion_veterinario($usuario,$passw);
+        $variable2 = $this->Login_model->very_sesion_amo($usuario,$passw);
 
-        if ($this->input->post('submit_login')) {
-
-            $this->form_validation->set_rules('username', 'Usuario', 'required');
-            $this->form_validation->set_rules('password', 'Contraseña', 'required');
-
-            if ($this->form_validation->run() == FALSE) {
-                $data['mensaje'] = '';
-                $this->load->view('login', $data);
+        if ($variable == TRUE) {
+            $estado = $this->Registros_model->very_estado_admin($usuario,$passw);
+            if ($estado == TRUE) {
+                $usuario = $this->Login_model->getUsuarioPrestador($name);                    
+                if ($usuario) 
+                    $usuario_data = array(
+                    'nombre' => $usuario->NM1_PRESTADOR,
+                    'snombre' => $usuario->NM2_PRESTADOR,
+                    'ape' => $usuario->AP1_PRESTADOR,
+                    'sape' => $usuario->AP2_PRESTADOR,
+                    'codUsuario' => $usuario->COD_PRESTADOR         
+                );
+                $this->session->set_userdata('datos_usuario',$usuario_data);
+                $data = 0;            
+                $resultadosJson = json_encode($data);
             } else {
-
-                if ($variable == TRUE) {
-                    $estado = $this->Registros_model->very_estado_admin();
-                    if ($estado == TRUE) {
-                        $variables = array('usuario' => $this->input->post('username'));
-                        $this->session->set_userdata($variables);
-
-                        //crear la variable de sesion para hallar el id del usuario loqueado
-                        $result = $this->Registros_model->get_iduser($_SESSION['usuario']) ;
-                        $this->session->set_userdata('iduser',$result->id);
-                        $this->session->set_userdata('idempresa',$result->id_empresa);
-
-                        $this->load->view('admin/vwDashboard', $variables);
-                    } else {
-                        $data = array('mensaje' => 'El usuario Administrador no esta activo | verifique su correo');
-                        $this->load->view('login', $data);
-                    }
-                }
-                if ($variable1 == TRUE) {
-                    $estado1 = $this->Registros_model->very_estado_veterinario();
-                    if ($estado1 == TRUE) {
-                        $variables = array('usuario' => $this->input->post('username'));
-                        $this->session->set_userdata($variables);
-                        //crear la variable de sesion para hallar el id del usuario loqueado
-                        $result = $this->Registros_model->get_iduser($_SESSION['usuario']) ;
-                        $this->session->set_userdata('iduser',$result->id);
-                        $this->session->set_userdata('idempresa',$result->id_empresa);
-
-                        $variables['empresa'] = $this->Veterinaria_model->get_veterinaria();
-                        $this->load->view('veterinario/vwDashboard', $variables);
-                    } else {
-                        $data = array('mensaje' => 'El usuario Veterinario no esta activo | verifique su correo');
-                        $this->load->view('login', $data);
-                    }
-                }
-
-                if ($variable2 == TRUE) {
-                    $estado2 = $this->Registros_model->very_estado_amo();
-                    if ($estado2 == TRUE) {
-                        $variables = array('usuario' => $this->input->post('username'));
-                        $this->session->set_userdata($variables);
-
-                        //crear la variable de sesion para hallar el id del usuario loqueado
-                        $result = $this->Registros_model->get_iduser($_SESSION['usuario']) ;
-                        $this->session->set_userdata('iduser',$result->id);
-                        $this->session->set_userdata('idempresa',$result->id_empresa);
-
-                        $this->load->view('amo/vwDashboard', $variables);
-                    } else {
-                        $data = array('mensaje' => 'El usuario Amo no esta activo | verifique su correo');
-                        $this->load->view('login', $data);
-                    }
-                }
-                if ($variable == FALSE && $variable1 == FALSE && $variable2 == FALSE) {
-                    $data = array('mensaje' => 'El usuario no existe, registrese si lo desea o comuniquese con Control Mascota');
-                    $this->load->view('login', $data);
-                }
-                /*else{
-                   //crear la variable de sesion para hallar el id del usuario loqueado
-                   $result = $this->Registros_model->get_iduser($_SESSION['usuario']) ;
-                   $this->session->set_userdata('iduser',$result->id);
-                   $this->session->set_userdata('idempresa',$result->id_empresa);
-               
-               }*/
+                $this->session->unset_userdata('datos_usuario');
+                $data = "El usuario no esta activo, verifique su correo"; 
+                $resultadosJson = json_encode($data);
             }
-        } else {
-            redirect() . base_url('index.php/Login');
+            echo $resultadosJson;   
+        }
+        if ($variable1 == TRUE) {
+            $estado1 = $this->Registros_model->very_estado_veterinario($usuario,$passw);
+            if ($estado1 == TRUE) {
+                $usuario = $this->Users_model->get_user_xusu($usuario);                    
+                if ($usuario) 
+                    $usuario_data = array(
+                    'id' => $usuario->id,  
+                    'idempresa' => $usuario->id_empresa,
+                    'usuario' => $usuario->usuario,
+                    'nombre' => $usuario->nombre,
+                    'ape' => $usuario->apellidos  
+                );
+                $this->session->set_userdata('datos_usuario',$usuario_data);
+                $data = 1;            
+                $resultadosJson = json_encode($data);
+            } else {
+                $this->session->unset_userdata('datos_usuario');
+                $data = "El usuario no esta activo, verifique su correo"; 
+                $resultadosJson = json_encode($data);
+            }
+            echo $resultadosJson;   
+        }
+
+        if ($variable2 == TRUE) {
+            $estado2 = $this->Registros_model->very_estado_amo($usuario,$passw);
+            if ($estado2 == TRUE) {
+                $usuario = $this->Login_model->getUsuarioPrestador($name);                    
+                if ($usuario) 
+                    $usuario_data = array(
+                    'nombre' => $usuario->NM1_PRESTADOR,
+                    'snombre' => $usuario->NM2_PRESTADOR,
+                    'ape' => $usuario->AP1_PRESTADOR,
+                    'sape' => $usuario->AP2_PRESTADOR,
+                    'codUsuario' => $usuario->COD_PRESTADOR         
+                );
+                $this->session->set_userdata('datos_usuario',$usuario_data);
+                $data = 2;            
+                $resultadosJson = json_encode($data);
+            } else {
+                $this->session->unset_userdata('datos_usuario');
+                $data = "El usuario no esta activo, verifique su correo"; 
+                $resultadosJson = json_encode($data);
+            }
+            echo $resultadosJson;     
+        }
+        if ($variable == FALSE && $variable1 == FALSE && $variable2 == FALSE) {
+            $data = 4; 
+            $resultadosJson = json_encode($data);
+            echo $resultadosJson; 
         }
     }
 

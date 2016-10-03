@@ -148,9 +148,9 @@ class Registros_model extends CI_Model {
         }
     }
 
-    public function very_estado_admin() {
-        $consulta = $this->db->get_where('users', array('usuario' => $this->input->post('username', TRUE),
-            'pass' => md5($this->input->post('password', TRUE)), 'nivel' => 'Administrador', 'estado' => '1'));
+    public function very_estado_admin($usuario,$passw) {
+        $consulta = $this->db->get_where('users', array('usuario' => $usuario,
+            'pass' => md5($passw), 'nivel' => 'Administrador', 'estado' => '1'));
 
         if ($consulta->num_rows() == 1) {
             return TRUE;
@@ -159,9 +159,9 @@ class Registros_model extends CI_Model {
         }
     }
 
-    public function very_estado_veterinario() {
-        $consulta = $this->db->get_where('users', array('usuario' => $this->input->post('username', TRUE),
-            'pass' => md5($this->input->post('password', TRUE)), 'nivel' => 'Veterinario', 'estado' => '1'));
+    public function very_estado_veterinario($usuario,$passw) {
+        $consulta = $this->db->get_where('users', array('usuario' => $usuario,
+            'pass' => md5($passw), 'nivel' => 'Veterinario', 'estado' => '1'));
 
         if ($consulta->num_rows() == 1) {
             return TRUE;
@@ -170,9 +170,9 @@ class Registros_model extends CI_Model {
         }
     }
 
-    public function very_estado_amo() {
-        $consulta = $this->db->get_where('users', array('usuario' => $this->input->post('username', TRUE),
-            'pass' => md5($this->input->post('password', TRUE)), 'nivel' => 'Amo', 'estado' => '1'));
+    public function very_estado_amo($usuario,$passw) {
+        $consulta = $this->db->get_where('users', array('usuario' => $usuario,
+            'pass' => md5($passw), 'nivel' => 'Amo', 'estado' => '1'));
 
         if ($consulta->num_rows() == 1) {
             return TRUE;
