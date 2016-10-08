@@ -16,6 +16,12 @@ class Login extends CI_Controller {
     }
 
     public function very_sesion() {
+        header('Content-type: application/json');
+        header("Access-Control-Allow-Origin: *");
+        header("Access-Control-Allow-Methods: GET");
+        header("Access-Control-Allow-Methods: GET, OPTIONS");
+        header("Access-Control-Allow-Headers: Content-Type, Content-Length, Accept-Encoding");
+
         $usuario = $this->input->post('usuario');
         $passw = $this->input->post('passw');
 
@@ -29,11 +35,11 @@ class Login extends CI_Controller {
                 $usuario = $this->Users_model->get_user_xusu($usuario);                     
                 if ($usuario) 
                     $usuario_data = array(
-                    'nombre' => $usuario->NM1_PRESTADOR,
-                    'snombre' => $usuario->NM2_PRESTADOR,
-                    'ape' => $usuario->AP1_PRESTADOR,
-                    'sape' => $usuario->AP2_PRESTADOR,
-                    'codUsuario' => $usuario->COD_PRESTADOR         
+                    'id' => $usuario->id,  
+                    'idempresa' => $usuario->id_empresa,
+                    'usuario' => $usuario->usuario,
+                    'nombre' => $usuario->nombre,
+                    'ape' => $usuario->apellidos  
                 );
                 $this->session->set_userdata('datos_usuario',$usuario_data);
                 $data = 0;            
@@ -62,7 +68,7 @@ class Login extends CI_Controller {
                 $resultadosJson = json_encode($data);
             } else {
                 $this->session->unset_userdata('datos_usuario');
-                $data = "El usuario no esta activo, verifique su correo"; 
+                $data = 3; 
                 $resultadosJson = json_encode($data);
             }
             echo $resultadosJson;   
@@ -74,18 +80,18 @@ class Login extends CI_Controller {
                 $usuario = $this->Users_model->get_user_xusu($usuario);                     
                 if ($usuario) 
                     $usuario_data = array(
-                    'nombre' => $usuario->NM1_PRESTADOR,
-                    'snombre' => $usuario->NM2_PRESTADOR,
-                    'ape' => $usuario->AP1_PRESTADOR,
-                    'sape' => $usuario->AP2_PRESTADOR,
-                    'codUsuario' => $usuario->COD_PRESTADOR         
+                    'id' => $usuario->id,  
+                    'idempresa' => $usuario->id_empresa,
+                    'usuario' => $usuario->usuario,
+                    'nombre' => $usuario->nombre,
+                    'ape' => $usuario->apellidos  
                 );
                 $this->session->set_userdata('datos_usuario',$usuario_data);
                 $data = 2;            
                 $resultadosJson = json_encode($data);
             } else {
                 $this->session->unset_userdata('datos_usuario');
-                $data = "El usuario no esta activo, verifique su correo"; 
+                $data = 3; 
                 $resultadosJson = json_encode($data);
             }
             echo $resultadosJson;     

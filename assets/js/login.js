@@ -21,12 +21,20 @@ function login(){
                 confirmButtonText: "Ok"
             });
         }
+        if(resp == 3){
+            swal({
+                title: "Aviso!",
+                text: "El usuario no esta activo, verifique su correo",
+                type: "error",
+                confirmButtonText: "Ok"
+            });
+        }
 
     })
         .fail(function() {
         swal({
             title: "Aviso!",
-            text: resp,
+            text: "Error en bbdd",
             type: "error",
             confirmButtonText: "Ok"
         });
