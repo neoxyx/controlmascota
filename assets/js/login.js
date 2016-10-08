@@ -14,12 +14,22 @@ function login(){
             window.location = "http://controlmascota.dev/index.php/admin/Dashboard";
         }
         if(resp == 4){
-            alertify.alert("<b>Aviso</b>","Usuario y/o contraseña erroneos");
+            swal({
+                title: "Aviso!",
+                text: "Usuario y/o contraseña erroneos",
+                type: "error",
+                confirmButtonText: "Ok"
+            });
         }
 
     })
         .fail(function() {
-        alertify.alert("<b>Confirmación</b>",resp);
+        swal({
+            title: "Aviso!",
+            text: resp,
+            type: "error",
+            confirmButtonText: "Ok"
+        });
     })
 
 }

@@ -26,7 +26,7 @@ class Login extends CI_Controller {
         if ($variable == TRUE) {
             $estado = $this->Registros_model->very_estado_admin($usuario,$passw);
             if ($estado == TRUE) {
-                $usuario = $this->Login_model->getUsuarioPrestador($name);                    
+                $usuario = $this->Users_model->get_user_xusu($usuario);                     
                 if ($usuario) 
                     $usuario_data = array(
                     'nombre' => $usuario->NM1_PRESTADOR,
@@ -71,7 +71,7 @@ class Login extends CI_Controller {
         if ($variable2 == TRUE) {
             $estado2 = $this->Registros_model->very_estado_amo($usuario,$passw);
             if ($estado2 == TRUE) {
-                $usuario = $this->Login_model->getUsuarioPrestador($name);                    
+                $usuario = $this->Users_model->get_user_xusu($usuario);                     
                 if ($usuario) 
                     $usuario_data = array(
                     'nombre' => $usuario->NM1_PRESTADOR,
@@ -105,7 +105,7 @@ class Login extends CI_Controller {
 
     public function logout() {
         $this->session->sess_destroy();
-        redirect(base_url());
+        redirect(base_url('index.php/Login'));
     }
 
     public function get_perfil_admin() {

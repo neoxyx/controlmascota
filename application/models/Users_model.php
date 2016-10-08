@@ -91,16 +91,16 @@ class Users_model extends CI_Model {
     }
 
 
-     public function get_user_xusu($xusu) {
-            $query = $this->db->get_where('users',array('usuario'=>$xusu));
-            if ($query->num_rows() != 0) {
-                return $query->row();  //retorna 1 sola fila
-            } else {
+    public function get_user_xusu($xusu) {
+        $query = $this->db->get_where('users',array('usuario'=>$xusu));
+        if ($query->num_rows() != 0) {
+            return $query->row();  //retorna 1 sola fila
+        } else {
 
-                print 'no results';
-                return FALSE;
-            }
+            print 'no results';
+            return FALSE;
         }
+    }
 
     public function get_edad() {
         $user=$_SESSION['usuario'];

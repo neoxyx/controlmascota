@@ -5,15 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Control Mascotas V 1.0.0</title>
         <!--link the bootstrap css file-->
-        <link href="<?php echo base_url().'assets/css/bootstrap.css'?>" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!--load jQuery library-->
         <script src="<?php echo base_url().'assets/js/jquery.js'?>"></script>
         <!--load bootstrap.js-->
         <script src="<?php echo base_url().'assets/js/bootstrap.js'?>"></script>
-        <!-- alertify -->
-        <link href="<?php echo base_url() . 'assets/css/alertify.min.css'?>" rel="stylesheet" type="text/css">
-        <script src="<?php echo base_url() . 'assets/js/alertify.min.js'?>"></script>
+        <!-- sweetalert -->
+        <script src="<?php echo base_url().'assets/sweetalert/dist/sweetalert.min.js'?>"></script>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/sweetalert/dist/sweetalert.css'?>">
         <!-- funciones -->
         <script src="<?php echo base_url() . 'assets/js/login.js'?>"></script>
         <style type="text/css">

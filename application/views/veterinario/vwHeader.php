@@ -194,12 +194,8 @@ Downloaded from http://devzone.co.in
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li><a href="<?php echo base_url() . 'index.php/veterinario/Dashboard' ?>"><i class="fa fa-dashboard"></i> Tablero</a></li>
-                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Empleados</a><?php } else { ?><a href="#"><i class="fa fa-dashboard"></i> Empleados</a><?php } ?></li> 
-                        <li <?php echo $pg == 'clientes' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/veterinario/Clientes/get_clientes/'.$cont ?>"><i class="fa fa-paw"></i> Clientes</a></li>
-                        <li <?php echo $pg == 'pacientes' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/veterinario/Pacientes/get_pacientes/'.$cont ?>"><i class="fa fa-paw"></i> Pacientes</a></li>
-                        <li <?php echo $pg == 'gps' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/veterinario/Gps' ?>"><i class="fa fa-map-marker"></i> GPS</a></li>
-
-
+                        <li <?php echo $pg == 'user' ? 'class="active"' : '' ?>><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Caracterizar clinica</a><?php } else { ?><a href="#"><i class="fa fa-hospital-o"></i> Caracterizar clinica</a><?php } ?></li> 
+                        <li <?php echo $pg == 'clientes' ? 'class="active"' : '' ?>><a href="<?php echo base_url() . 'index.php/veterinario/Clientes/get_clientes/'.$cont ?>"><i class="fa fa-gears"></i> Gestión de usuarios</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right navbar-user">
@@ -224,8 +220,8 @@ Downloaded from http://devzone.co.in
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $usuario ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
-                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>"><i class="fa fa-hospital-o"></i> Mi Clinica </a><?php } else { ?><a href="#"><i class="fa fa-building"></i> Mi empresa </a><?php } ?></li>
-                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Mis empleados </a><?php } else { ?><a href="#"><i class="fa fa-users"></i> Mis empleados </a><?php } ?></li>
+                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>"><i class="fa fa-hospital-o"></i> Mi Clinica </a><?php } else { ?><a href="#"><i class="fa fa-building"></i> Mi clinica </a><?php } ?></li>
+                                <li><?php if ($permiso === 'Administrador') { ?><a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_personal' ?>"><i class="fa fa-users"></i> Mis empleados </a><?php } else { ?><a href="#"><i class="fa fa-users"></i> Mis usuarios </a><?php } ?></li>
                                 <li class="divider"></li>
                                 <li><a href="<?php echo base_url() . 'index.php/Login/logout' ?>"><i class="fa fa-power-off"></i> Salir</a></li>
                             </ul>

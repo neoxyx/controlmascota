@@ -42,123 +42,12 @@ Downloaded from http://devzone.co.in
     </div><!-- /.row -->
 
     <div class="row">
-        <div class="col-lg-3">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <i class="fa fa-key fa-5x"></i>
-                        </div>
-                        <div class="col-xs-6 text-right">
-                            <p class="announcement-heading"></p>
-                            <p class="announcement-text">Licencias</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="panel-footer announcement-bottom">
-                        <div class="row">
-                            <div class="col-xs-8">
-                                Ver / Activar
-                            </div>
-                            <div class="col-xs-4 text-right">
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="panel panel-warning">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <i class="fa fa-hospital-o fa-5x"></i>
-                        </div>
-                        <div class="col-xs-6 text-right">
-                            <p class="announcement-heading"></p>
-                            <p class="announcement-text">Mi Clinica</p>
-                        </div>
-                    </div>
-                </div>
-                <?php if ($permisos == 'Administrador') { ?>
-                <a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empresa' ?>">
-                    <div class="panel-footer announcement-bottom">
-                        <div class="row">
-                            <div class="col-xs-8">
-                                Ver / Completar
-                            </div>
-                            <div class="col-xs-4 text-right">
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a><?php } else { ?>
-                <a href="#">
-                    <div class="panel-footer announcement-bottom">
-                        <div class="row">
-                            <div class="col-xs-8">
-                                Ver / Completar
-                            </div>
-                            <div class="col-xs-4 text-right">
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a><?php }
-                ?>
-            </div>
-        </div>
-        <div class="col-lg-3">
-            <div class="panel panel-danger">
+        <div class="col-lg-3"> <!-- comienzo a insertar la opción de tablero para creación de clientes -->
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-6">
                             <i class="fa fa-users fa-5x"></i>
-                        </div>
-                        <div class="col-xs-6 text-right">
-                            <p class="announcement-text">Empleados</p>
-                            <p class="announcement-text"><?php
-                                echo $cont;
-                                ?> </p>
-                        </div>
-                    </div>
-                </div>
-                <?php if ($permisos == 'Administrador') { ?>
-                <a href="<?php echo base_url() . 'index.php/veterinario/Perfil/get_empleados' ?>">
-                    <div class="panel-footer announcement-bottom">
-                        <div class="row">
-                            <div class="col-xs-8">
-                                Ver / Añadir
-                            </div>
-                            <div class="col-xs-4 text-right">
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a><?php } else { ?>
-                <a href="#">
-                    <div class="panel-footer announcement-bottom">
-                        <div class="row">
-                            <div class="col-xs-8">
-                                Ver / Añadir
-                            </div>
-                            <div class="col-xs-4 text-right">
-                                <i class="fa fa-arrow-circle-right"></i>
-                            </div>
-                        </div>
-                    </div>
-                </a><?php }
-                ?>
-            </div>
-        </div>
-        <div class="col-lg-3"> <!-- comienzo a insertar la opción de tablero para creación de clientes -->
-            <div class="panel panel-success">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <i class="fa fa-paw fa-5x"></i>
                         </div>
                         <div class="col-xs-6 text-right">
                             <p class="announcement-text">Clientes</p>
@@ -197,7 +86,7 @@ Downloaded from http://devzone.co.in
             </div>
         </div><!--termina div de opcion de clientes en el tablero del veterinario -->
         <div class="col-lg-3">
-            <div class="panel panel-success">
+            <div class="panel panel-danger">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-6">
