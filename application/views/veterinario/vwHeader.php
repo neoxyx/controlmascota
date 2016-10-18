@@ -17,9 +17,11 @@ if(!$session_data ){
 
         <title>Control Mascotas</title>
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css/calendar/jquery-ui.css'?>" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.js' ?>"></script>
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery-ui-1.12.1/jquery-ui.js' ?>"></script>
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.ui.datepicker-es.js' ?>"></script>
+        <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
         <!-- Bootstrap core CSS -->
         <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -33,8 +35,8 @@ if(!$session_data ){
         <link href="<?php echo base_url() . 'assets/css/alertify.min.css'?>" rel="stylesheet" type="text/css">
         <script src="<?php echo base_url() . 'assets/js/alertify.min.js'?>"></script>
         <!-- funciones -->
+        <script src="<?php echo base_url() . 'assets/veterinario/pacientes.js'?>"></script>
         <script src="<?php echo base_url() . 'assets/js/mascotas.js'?>"></script>
-
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script language="javascript" type="text/javascript">
             $(document).ready(function () {

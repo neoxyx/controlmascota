@@ -1,3 +1,10 @@
+<?php 
+$session_data = $this->session->userdata('datos_usuario');
+        $id = $session_data['id'];
+        $usuario = $session_data['usuario'];
+        $nombre = $session_data['nombre'];
+        $ape = $session_data['ape'];
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,7 +17,6 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url() . 'assets/css/calendar/jquery-ui.css'?>" />
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.js' ?>"></script>
         <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery-ui-1.12.1/jquery-ui.js' ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/js/jquery.ui.datepicker-es.js' ?>"></script>
         <!-- Bootstrap core CSS -->
         <link href="<?php echo base_url() . 'assets/css/bootstrap.css' ?>" rel="stylesheet">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
@@ -141,7 +147,7 @@ Downloaded from http://devzone.co.in
                         </li>
 
                         <li class="dropdown user-dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $_SESSION['usuario'] ?> <b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $usuario ?> <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo base_url() . 'index.php/amo/Perfil/get_perfil' ?>"><i class="fa fa-user"></i>  Mi Perfil</a></li>
                                 <li class = "divider"></li>

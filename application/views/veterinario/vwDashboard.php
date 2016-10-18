@@ -105,7 +105,7 @@ Downloaded from http://devzone.co.in
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-8">
-                                Ver
+                                Ver / Añadir
                             </div>
                             <div class="col-xs-4 text-right">
                                 <i class="fa fa-arrow-circle-right"></i>
@@ -117,7 +117,7 @@ Downloaded from http://devzone.co.in
                     <div class="panel-footer announcement-bottom">
                         <div class="row">
                             <div class="col-xs-8">
-                                Ver / Añadir
+                                Ver 
                             </div>
                             <div class="col-xs-4 text-right">
                                 <i class="fa fa-arrow-circle-right"></i>
